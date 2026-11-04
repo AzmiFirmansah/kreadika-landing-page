@@ -171,7 +171,7 @@ function Navbar({ currentPath = "/", onNavigate }) {
                     href="/pendaftaran"
                     onClick={(e) => handleClick(e, "/pendaftaran")}
                     className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath.startsWith("/pendaftaran")
+                      currentPath === "/pendaftaran"
                         ? "bg-kreadika-ice"
                         : "hover:bg-slate-50"
                     }`}
@@ -181,6 +181,22 @@ function Navbar({ currentPath = "/", onNavigate }) {
                     </span>
                     <span className="block text-xs text-slate-500">
                       Biaya dan cara mendaftar
+                    </span>
+                  </a>
+                  <a
+                    href="/pendaftaran-online"
+                    onClick={(e) => handleClick(e, "/pendaftaran-online")}
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath.startsWith("/pendaftaran-online")
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
+                  >
+                    <span className="block font-semibold text-kreadika-navy">
+                      Pendaftaran Online
+                    </span>
+                    <span className="block text-xs text-slate-500">
+                      Sistem formulir online
                     </span>
                   </a>
                   <a
@@ -350,12 +366,23 @@ function Navbar({ currentPath = "/", onNavigate }) {
                 href="/pendaftaran"
                 onClick={(e) => handleClick(e, "/pendaftaran")}
                 className={`block py-1.5 text-sm ${
-                  currentPath.startsWith("/pendaftaran")
+                  currentPath === "/pendaftaran"
                     ? "font-semibold text-kreadika-royal"
                     : "text-slate-700"
                 }`}
               >
                 Pendaftaran
+              </a>
+              <a
+                href="/pendaftaran-online"
+                onClick={(e) => handleClick(e, "/pendaftaran-online")}
+                className={`block py-1.5 text-sm ${
+                  currentPath.startsWith("/pendaftaran-online")
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
+              >
+                Pendaftaran Online
               </a>
               <a
                 href="/prosiding"

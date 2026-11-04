@@ -7,6 +7,7 @@ import Panitia from "./pages/Panitia";
 import Mitra from "./pages/Mitra";
 import CallForPapers from "./pages/CallForPapers";
 import Pendaftaran from "./pages/Pendaftaran";
+import PendaftaranOnline from "./pages/PendaftaranOnline";
 import Prosiding from "./pages/Prosiding";
 import Kontak from "./pages/Kontak";
 
@@ -35,6 +36,8 @@ function App() {
       document.title = "Mitra & Kerja Sama | KREADIKA 2027";
     } else if (currentPath.startsWith("/call-for-papers")) {
       document.title = "Call for Papers | KREADIKA 2027";
+    } else if (currentPath.startsWith("/pendaftaran-online")) {
+      document.title = "Pendaftaran Online | KREADIKA 2027";
     } else if (currentPath.startsWith("/pendaftaran")) {
       document.title = "Pendaftaran | KREADIKA 2027";
     } else if (currentPath.startsWith("/prosiding")) {
@@ -112,6 +115,9 @@ function App() {
     }
     if (currentPath.startsWith("/call-for-papers")) {
       return <CallForPapers onNavigate={navigate} />;
+    }
+    if (currentPath.startsWith("/pendaftaran-online")) {
+      return <PendaftaranOnline onNavigate={navigate} />;
     }
     if (currentPath.startsWith("/pendaftaran")) {
       return <Pendaftaran onNavigate={navigate} />;

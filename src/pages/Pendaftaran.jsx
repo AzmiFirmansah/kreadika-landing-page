@@ -1,4 +1,10 @@
-function Pendaftaran() {
+function Pendaftaran({ onNavigate }) {
+  const handleClick = (e, path) => {
+    if (onNavigate && path.startsWith("/")) {
+      e.preventDefault();
+      onNavigate(path);
+    }
+  };
   const biayaList = [
     {
       kategori: "Guru / tenaga kependidikan",
@@ -172,8 +178,9 @@ function Pendaftaran() {
               </div>
               <div className="flex shrink-0 flex-wrap items-center gap-3">
                 <a
-                  href="https://kreadika.id/pendaftaran-online"
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white"
+                  href="/pendaftaran-online"
+                  onClick={(e) => handleClick(e, "/pendaftaran-online")}
+                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-600"
                 >
                   Isi formulir pendaftaran
                 </a>
