@@ -25,29 +25,82 @@ function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // Update document title dynamically based on active route
+  // Update document title and SEO meta tags dynamically based on active route
   useEffect(() => {
+    let title = "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
+    let description =
+      "KREADIKA 2027 – Seminar Nasional Pendidikan Kreatif dan Adaptif di Era Digital. Menghubungkan pendidik, peneliti, dan praktisi untuk inovasi pendidikan Indonesia.";
+    let path = "/";
+
     if (currentPath.startsWith("/tentang")) {
-      document.title =
-        "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
+      title = "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
+      description =
+        "Profil, visi, tema, dan latar belakang Seminar Nasional Pendidikan Kreatif dan Adaptif (KREADIKA) 2027.";
+      path = "/tentang";
     } else if (currentPath.startsWith("/panitia")) {
-      document.title = "Panitia & Pembicara | KREADIKA 2027";
+      title = "Panitia & Pembicara | KREADIKA 2027";
+      description =
+        "Susunan panitia pengarah, panitia pelaksana, dan jajaran pembicara utama (keynote speaker) KREADIKA 2027.";
+      path = "/panitia";
     } else if (currentPath.startsWith("/mitra")) {
-      document.title = "Mitra & Kerja Sama | KREADIKA 2027";
+      title = "Mitra & Kerja Sama | KREADIKA 2027";
+      description =
+        "Peluang kemitraan dan daftar institusi rekanan, co-host perguruan tinggi, serta organisasi profesi KREADIKA 2027.";
+      path = "/mitra";
     } else if (currentPath.startsWith("/call-for-papers")) {
-      document.title = "Call for Papers | KREADIKA 2027";
+      title = "Call for Papers | KREADIKA 2027 - Seminar Nasional Pendidikan";
+      description =
+        "Pengiriman makalah (call for papers) KREADIKA 2027. Subtema, tanggal penting, panduan penulisan, dan publikasi prosiding ber-ISBN.";
+      path = "/call-for-papers";
     } else if (currentPath.startsWith("/pendaftaran-online")) {
-      document.title = "Pendaftaran Online | KREADIKA 2027";
+      title = "Pendaftaran Online | KREADIKA 2027";
+      description =
+        "Formulir pendaftaran online peserta dan pemakalah Seminar Nasional Pendidikan Kreatif dan Adaptif KREADIKA 2027.";
+      path = "/pendaftaran-online";
     } else if (currentPath.startsWith("/pendaftaran")) {
-      document.title = "Pendaftaran | KREADIKA 2027";
+      title = "Pendaftaran & Biaya Kepesertaan | KREADIKA 2027";
+      description =
+        "Informasi alur pendaftaran, biaya kepesertaan pemakalah dan non-pemakalah Seminar Nasional KREADIKA 2027.";
+      path = "/pendaftaran";
     } else if (currentPath.startsWith("/prosiding")) {
-      document.title = "Prosiding | KREADIKA 2027";
+      title = "Prosiding & Publikasi Ilmiah | KREADIKA 2027";
+      description =
+        "Informasi prosiding ber-ISBN, akses terbuka (open access), dan publikasi artikel ilmiah KREADIKA 2027.";
+      path = "/prosiding";
     } else if (currentPath.startsWith("/kontak")) {
-      document.title = "Kontak | KREADIKA 2027";
-    } else {
-      document.title =
-        "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
+      title = "Kontak & Sekretariat | KREADIKA 2027";
+      description =
+        "Hubungi sekretariat KREADIKA 2027 melalui surel dan WhatsApp resmi untuk informasi pendaftaran, makalah, dan kerja sama.";
+      path = "/kontak";
     }
+
+    document.title = title;
+
+    // Update Meta Description
+    let metaDesc = document.querySelector('meta[name="description"]');
+    if (!metaDesc) {
+      metaDesc = document.createElement("meta");
+      metaDesc.name = "description";
+      document.head.appendChild(metaDesc);
+    }
+    metaDesc.content = description;
+
+    // Update Open Graph tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) ogTitle.content = title;
+    const ogDesc = document.querySelector('meta[property="og:description"]');
+    if (ogDesc) ogDesc.content = description;
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.content = `https://kreadika.id${path === "/" ? "" : path}`;
+
+    // Update Canonical Link
+    let canonical = document.querySelector('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.rel = "canonical";
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://kreadika.id${path === "/" ? "" : path}`;
   }, [currentPath]);
 
   // Handle hash scrolling and anchor jumps on path change

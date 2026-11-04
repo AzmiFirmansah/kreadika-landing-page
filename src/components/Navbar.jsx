@@ -20,11 +20,14 @@ function Navbar({ currentPath = "/", onNavigate }) {
         <a
           href="/"
           onClick={(e) => handleClick(e, "/")}
+          aria-label="KREADIKA Beranda"
           className="flex items-center gap-3"
         >
           <img
             src={logoKreadika}
-            alt="Logo KREADIKA"
+            alt="Logo KREADIKA 2027"
+            width="170"
+            height="44"
             className="h-10 w-auto sm:h-11"
           />
         </a>
@@ -66,6 +69,9 @@ function Navbar({ currentPath = "/", onNavigate }) {
                 <img
                   src={chevronDown}
                   alt=""
+                  aria-hidden="true"
+                  width="12"
+                  height="12"
                   className="h-3 w-3 opacity-60 transition-transform duration-300 ease-out group-hover:rotate-180 group-hover:opacity-100"
                 />
               </a>
@@ -200,7 +206,7 @@ function Navbar({ currentPath = "/", onNavigate }) {
           id="mobile-menu-btn"
           type="button"
           aria-expanded={mobileMenuOpen}
-          aria-label="Open navigation menu"
+          aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="inline-flex items-center justify-center rounded-lg border border-blue-200 bg-kreadika-ice p-2 text-kreadika-navy md:hidden cursor-pointer transition-all duration-200 hover:border-kreadika-royal/40 hover:bg-blue-100/70 active:scale-95"
         >

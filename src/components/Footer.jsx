@@ -17,7 +17,10 @@ function Footer({ onNavigate }) {
             <div className="inline-block rounded-xl bg-white px-4 py-2.5">
               <img
                 src={logoKreadika}
-                alt="Logo KREADIKA"
+                alt="Logo KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif"
+                width="153"
+                height="40"
+                loading="lazy"
                 className="h-9 w-auto"
               />
             </div>
