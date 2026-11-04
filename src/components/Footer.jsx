@@ -94,6 +94,15 @@ function Footer({ onNavigate }) {
               </li>
               <li>
                 <a
+                  href="/mitra"
+                  onClick={(e) => handleClick(e, "/mitra")}
+                  className="text-blue-100"
+                >
+                  Mitra &amp; Kerja Sama
+                </a>
+              </li>
+              <li>
+                <a
                   href="/kontak"
                   onClick={(e) => handleClick(e, "/kontak")}
                   className="text-blue-100"

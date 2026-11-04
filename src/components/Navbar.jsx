@@ -39,7 +39,9 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/"
                 onClick={(e) => handleClick(e, "/")}
-                className={currentPath === "/" ? "font-semibold text-kreadika-royal" : ""}
+                className={
+                  currentPath === "/" ? "font-semibold text-kreadika-royal" : ""
+                }
               >
                 Beranda
               </a>
@@ -74,7 +76,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/tentang"
                     onClick={(e) => handleClick(e, "/tentang")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath === "/tentang"
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Tentang KREADIKA
@@ -86,7 +92,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/panitia"
                     onClick={(e) => handleClick(e, "/panitia")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath === "/panitia"
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Panitia
@@ -98,7 +108,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/mitra"
                     onClick={(e) => handleClick(e, "/mitra")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath === "/mitra" || currentPath === "/mitra/"
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Mitra
@@ -175,7 +189,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/kontak"
                 onClick={(e) => handleClick(e, "/kontak")}
-                className={currentPath === "/kontak" ? "font-semibold text-kreadika-royal" : ""}
+                className={
+                  currentPath === "/kontak"
+                    ? "font-semibold text-kreadika-royal"
+                    : ""
+                }
               >
                 Kontak
               </a>
@@ -261,21 +279,33 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/tentang"
                 onClick={(e) => handleClick(e, "/tentang")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath === "/tentang"
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Tentang KREADIKA
               </a>
               <a
                 href="/panitia"
                 onClick={(e) => handleClick(e, "/panitia")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath === "/panitia"
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Panitia
               </a>
               <a
                 href="/mitra"
                 onClick={(e) => handleClick(e, "/mitra")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath === "/mitra" || currentPath === "/mitra/"
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Mitra
               </a>
@@ -335,4 +365,3 @@ function Navbar({ currentPath = "/", onNavigate }) {
 }
 
 export default Navbar;
-

@@ -3,6 +3,8 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Tentang from "./pages/Tentang";
+import Panitia from "./pages/Panitia";
+import Mitra from "./pages/Mitra";
 
 function App() {
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
@@ -21,6 +23,12 @@ function App() {
     if (currentPath === "/tentang" || currentPath === "/tentang/") {
       document.title =
         "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
+    } else if (currentPath === "/panitia" || currentPath === "/panitia/") {
+      document.title =
+        "Panitia & Pembicara | KREADIKA 2027";
+    } else if (currentPath === "/mitra" || currentPath === "/mitra/") {
+      document.title =
+        "Mitra & Kerja Sama | KREADIKA 2027";
     } else {
       document.title =
         "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
@@ -38,6 +46,12 @@ function App() {
   const renderMainContent = () => {
     if (currentPath === "/tentang" || currentPath === "/tentang/") {
       return <Tentang onNavigate={navigate} />;
+    }
+    if (currentPath === "/panitia" || currentPath === "/panitia/") {
+      return <Panitia onNavigate={navigate} />;
+    }
+    if (currentPath === "/mitra" || currentPath === "/mitra/") {
+      return <Mitra onNavigate={navigate} />;
     }
     return <Home onNavigate={navigate} />;
   };
