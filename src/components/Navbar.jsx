@@ -34,52 +34,53 @@ function Navbar({ currentPath = "/", onNavigate }) {
           aria-label="Primary Navigation"
           className="hidden md:flex md:items-center"
         >
-          <ul className="flex items-center gap-7 text-sm font-medium text-slate-700">
+          <ul className="flex items-center gap-6 lg:gap-7 text-sm font-medium text-slate-700">
             <li>
               <a
                 href="/"
                 onClick={(e) => handleClick(e, "/")}
-                className={
-                  currentPath === "/" ? "font-semibold text-kreadika-royal" : ""
-                }
+                className={`py-2 transition-colors ${
+                  currentPath === "/"
+                    ? "font-semibold text-kreadika-royal"
+                    : "hover:text-kreadika-royal"
+                }`}
               >
                 Beranda
               </a>
             </li>
 
-            {/* Dropdown Menu: About Seminar */}
+            {/* Dropdown Menu: Tentang */}
             <li className="relative group">
-              <button
-                type="button"
-                data-dropdown-toggle="dropdown-tentang"
-                aria-expanded="false"
-                className={`flex items-center gap-1.5 py-2 cursor-pointer ${
+              <a
+                href="/tentang"
+                onClick={(e) => handleClick(e, "/tentang")}
+                className={`flex items-center gap-1.5 py-2 transition-colors cursor-pointer ${
                   currentPath.startsWith("/tentang") ||
                   currentPath.startsWith("/panitia") ||
                   currentPath.startsWith("/mitra")
                     ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
+                    : "hover:text-kreadika-royal"
                 }`}
               >
                 <span>Tentang</span>
                 <img
                   src={chevronDown}
                   alt=""
-                  className="h-3.5 w-3.5 opacity-60"
+                  className="h-3 w-3 opacity-60 transition-transform duration-200 group-hover:rotate-180"
                 />
-              </button>
+              </a>
               <div
                 id="dropdown-tentang"
-                className="hidden group-hover:block absolute left-0 top-full z-50 w-60 pt-1"
+                className="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-150 absolute left-0 top-full z-50 w-60 pt-2"
               >
                 <div className="rounded-xl border border-blue-100 bg-white p-1.5 shadow-lg shadow-blue-950/5">
                   <a
                     href="/tentang"
                     onClick={(e) => handleClick(e, "/tentang")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm transition-colors ${
                       currentPath === "/tentang"
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
+                        ? "bg-kreadika-ice text-kreadika-royal"
+                        : "hover:bg-slate-50 text-slate-700"
                     }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
@@ -92,10 +93,10 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/panitia"
                     onClick={(e) => handleClick(e, "/panitia")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm transition-colors ${
                       currentPath === "/panitia"
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
+                        ? "bg-kreadika-ice text-kreadika-royal"
+                        : "hover:bg-slate-50 text-slate-700"
                     }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
@@ -108,10 +109,10 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/mitra"
                     onClick={(e) => handleClick(e, "/mitra")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath === "/mitra" || currentPath === "/mitra/"
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm transition-colors ${
+                      currentPath.startsWith("/mitra")
+                        ? "bg-kreadika-ice text-kreadika-royal"
+                        : "hover:bg-slate-50 text-slate-700"
                     }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
@@ -125,109 +126,57 @@ function Navbar({ currentPath = "/", onNavigate }) {
               </div>
             </li>
 
-            {/* Dropdown Menu: Registration & Papers */}
-            <li className="relative group">
-              <button
-                type="button"
-                data-dropdown-toggle="dropdown-seminar"
-                aria-expanded="false"
-                className={`flex items-center gap-1.5 py-2 cursor-pointer ${
-                  currentPath.startsWith("/call-for-papers") ||
-                  currentPath.startsWith("/pendaftaran") ||
-                  currentPath.startsWith("/prosiding")
+            <li>
+              <a
+                href="/call-for-papers"
+                onClick={(e) => handleClick(e, "/call-for-papers")}
+                className={`py-2 transition-colors ${
+                  currentPath.startsWith("/call-for-papers")
                     ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
+                    : "hover:text-kreadika-royal"
                 }`}
               >
-                <span>Seminar</span>
-                <img
-                  src={chevronDown}
-                  alt=""
-                  className="h-3.5 w-3.5 opacity-60"
-                />
-              </button>
-              <div
-                id="dropdown-seminar"
-                className="hidden group-hover:block absolute left-0 top-full z-50 w-60 pt-1"
+                Call for Papers
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/pendaftaran"
+                onClick={(e) => handleClick(e, "/pendaftaran")}
+                className={`py-2 transition-colors ${
+                  currentPath.startsWith("/pendaftaran")
+                    ? "font-semibold text-kreadika-royal"
+                    : "hover:text-kreadika-royal"
+                }`}
               >
-                <div className="rounded-xl border border-blue-100 bg-white p-1.5 shadow-lg shadow-blue-950/5">
-                  <a
-                    href="/call-for-papers"
-                    onClick={(e) => handleClick(e, "/call-for-papers")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath.startsWith("/call-for-papers")
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
-                    }`}
-                  >
-                    <span className="block font-semibold text-kreadika-navy">
-                      Call for Papers
-                    </span>
-                    <span className="block text-xs text-slate-500">
-                      Topik, ketentuan, dan jadwal
-                    </span>
-                  </a>
-                  <a
-                    href="/pendaftaran"
-                    onClick={(e) => handleClick(e, "/pendaftaran")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath === "/pendaftaran"
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
-                    }`}
-                  >
-                    <span className="block font-semibold text-kreadika-navy">
-                      Pendaftaran
-                    </span>
-                    <span className="block text-xs text-slate-500">
-                      Biaya dan cara mendaftar
-                    </span>
-                  </a>
-                  <a
-                    href="/pendaftaran-online"
-                    onClick={(e) => handleClick(e, "/pendaftaran-online")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath.startsWith("/pendaftaran-online")
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
-                    }`}
-                  >
-                    <span className="block font-semibold text-kreadika-navy">
-                      Pendaftaran Online
-                    </span>
-                    <span className="block text-xs text-slate-500">
-                      Sistem formulir online
-                    </span>
-                  </a>
-                  <a
-                    href="/prosiding"
-                    onClick={(e) => handleClick(e, "/prosiding")}
-                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
-                      currentPath.startsWith("/prosiding")
-                        ? "bg-kreadika-ice"
-                        : "hover:bg-slate-50"
-                    }`}
-                  >
-                    <span className="block font-semibold text-kreadika-navy">
-                      Prosiding
-                    </span>
-                    <span className="block text-xs text-slate-500">
-                      Terbitan ber-ISSN dan ber-DOI
-                    </span>
-                  </a>
-                </div>
-              </div>
+                Pendaftaran
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="/prosiding"
+                onClick={(e) => handleClick(e, "/prosiding")}
+                className={`py-2 transition-colors ${
+                  currentPath.startsWith("/prosiding")
+                    ? "font-semibold text-kreadika-royal"
+                    : "hover:text-kreadika-royal"
+                }`}
+              >
+                Prosiding
+              </a>
             </li>
 
             <li>
               <a
                 href="/kontak"
                 onClick={(e) => handleClick(e, "/kontak")}
-                className={
+                className={`py-2 transition-colors ${
                   currentPath === "/kontak"
                     ? "font-semibold text-kreadika-royal"
-                    : ""
-                }
+                    : "hover:text-kreadika-royal"
+                }`}
               >
                 Kontak
               </a>
@@ -296,27 +245,32 @@ function Navbar({ currentPath = "/", onNavigate }) {
           mobileMenuOpen ? "block" : "hidden"
         } border-t border-blue-100 bg-white px-4 pt-3 pb-5 md:hidden`}
       >
-        <div className="space-y-3">
+        <div className="space-y-2">
           <a
             href="/"
             onClick={(e) => handleClick(e, "/")}
-            className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700"
+            className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              currentPath === "/"
+                ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                : "text-slate-700 hover:bg-slate-50"
+            }`}
           >
             Beranda
           </a>
 
-          <div className="px-3 py-1">
-            <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-sky">
+          {/* Group: Tentang */}
+          <div className="rounded-lg bg-slate-50/70 p-2.5">
+            <span className="block text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
               Tentang
-            </p>
-            <div className="mt-2 space-y-1 border-l-2 border-blue-100 pl-3">
+            </span>
+            <div className="mt-2 space-y-1 pl-1">
               <a
                 href="/tentang"
                 onClick={(e) => handleClick(e, "/tentang")}
-                className={`block py-1.5 text-sm ${
+                className={`block rounded-md px-2.5 py-1.5 text-sm transition-colors ${
                   currentPath === "/tentang"
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
+                    ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                    : "text-slate-700 hover:text-kreadika-royal"
                 }`}
               >
                 Tentang KREADIKA
@@ -324,10 +278,10 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/panitia"
                 onClick={(e) => handleClick(e, "/panitia")}
-                className={`block py-1.5 text-sm ${
+                className={`block rounded-md px-2.5 py-1.5 text-sm transition-colors ${
                   currentPath === "/panitia"
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
+                    ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                    : "text-slate-700 hover:text-kreadika-royal"
                 }`}
               >
                 Panitia
@@ -335,10 +289,10 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/mitra"
                 onClick={(e) => handleClick(e, "/mitra")}
-                className={`block py-1.5 text-sm ${
-                  currentPath === "/mitra" || currentPath === "/mitra/"
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
+                className={`block rounded-md px-2.5 py-1.5 text-sm transition-colors ${
+                  currentPath.startsWith("/mitra")
+                    ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                    : "text-slate-700 hover:text-kreadika-royal"
                 }`}
               >
                 Mitra
@@ -346,65 +300,49 @@ function Navbar({ currentPath = "/", onNavigate }) {
             </div>
           </div>
 
-          <div className="px-3 py-1">
-            <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-sky">
-              Seminar
-            </p>
-            <div className="mt-2 space-y-1 border-l-2 border-blue-100 pl-3">
-              <a
-                href="/call-for-papers"
-                onClick={(e) => handleClick(e, "/call-for-papers")}
-                className={`block py-1.5 text-sm ${
-                  currentPath.startsWith("/call-for-papers")
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
-                }`}
-              >
-                Call for Papers
-              </a>
-              <a
-                href="/pendaftaran"
-                onClick={(e) => handleClick(e, "/pendaftaran")}
-                className={`block py-1.5 text-sm ${
-                  currentPath === "/pendaftaran"
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
-                }`}
-              >
-                Pendaftaran
-              </a>
-              <a
-                href="/pendaftaran-online"
-                onClick={(e) => handleClick(e, "/pendaftaran-online")}
-                className={`block py-1.5 text-sm ${
-                  currentPath.startsWith("/pendaftaran-online")
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
-                }`}
-              >
-                Pendaftaran Online
-              </a>
-              <a
-                href="/prosiding"
-                onClick={(e) => handleClick(e, "/prosiding")}
-                className={`block py-1.5 text-sm ${
-                  currentPath.startsWith("/prosiding")
-                    ? "font-semibold text-kreadika-royal"
-                    : "text-slate-700"
-                }`}
-              >
-                Prosiding
-              </a>
-            </div>
-          </div>
+          <a
+            href="/call-for-papers"
+            onClick={(e) => handleClick(e, "/call-for-papers")}
+            className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              currentPath.startsWith("/call-for-papers")
+                ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                : "text-slate-700 hover:bg-slate-50"
+            }`}
+          >
+            Call for Papers
+          </a>
+
+          <a
+            href="/pendaftaran"
+            onClick={(e) => handleClick(e, "/pendaftaran")}
+            className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              currentPath.startsWith("/pendaftaran")
+                ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                : "text-slate-700 hover:bg-slate-50"
+            }`}
+          >
+            Pendaftaran
+          </a>
+
+          <a
+            href="/prosiding"
+            onClick={(e) => handleClick(e, "/prosiding")}
+            className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
+              currentPath.startsWith("/prosiding")
+                ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                : "text-slate-700 hover:bg-slate-50"
+            }`}
+          >
+            Prosiding
+          </a>
 
           <a
             href="/kontak"
             onClick={(e) => handleClick(e, "/kontak")}
-            className={`block rounded-lg px-3 py-2 text-sm font-medium ${
+            className={`block rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
               currentPath === "/kontak"
-                ? "font-semibold text-kreadika-royal"
-                : "text-slate-700"
+                ? "bg-kreadika-ice font-semibold text-kreadika-royal"
+                : "text-slate-700 hover:bg-slate-50"
             }`}
           >
             Kontak
@@ -414,7 +352,7 @@ function Navbar({ currentPath = "/", onNavigate }) {
             <a
               href="/call-for-papers#kirim"
               onClick={(e) => handleClick(e, "/call-for-papers#kirim")}
-              className="block w-full rounded-lg bg-kreadika-royal px-4 py-2.5 text-center text-sm font-semibold text-white"
+              className="block w-full rounded-lg bg-kreadika-royal px-4 py-2.5 text-center text-sm font-semibold text-white shadow-xs"
             >
               Kirim Abstrak
             </a>
