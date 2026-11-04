@@ -193,8 +193,8 @@ function CallForPapers({ onNavigate }) {
       <section className="bg-kreadika-navy text-white">
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               KREADIKA 2027
             </span>
 
@@ -252,9 +252,9 @@ function CallForPapers({ onNavigate }) {
             {infoSeminar.map((item, index) => (
               <div
                 key={index}
-                className="flex flex-col rounded-2xl border border-blue-100 bg-kreadika-ice/50 p-5 transition"
+                className="group flex flex-col rounded-2xl border border-blue-100 bg-kreadika-ice/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:bg-white hover:shadow-md hover:shadow-blue-950/5"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-kreadika-royal shadow-xs">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-kreadika-royal shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -268,7 +268,7 @@ function CallForPapers({ onNavigate }) {
                 <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-sky-700">
                   {item.label}
                 </p>
-                <p className="mt-1 text-base font-bold text-kreadika-navy">
+                <p className="mt-1 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   {item.value}
                 </p>
                 <p className="mt-0.5 text-xs text-slate-500">{item.desc}</p>
@@ -295,13 +295,13 @@ function CallForPapers({ onNavigate }) {
               {jenisArtikel.map((artikel, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition hover:shadow-md"
+                  className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5"
                 >
                   <div>
-                    <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal">
+                    <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal transition-colors duration-200 group-hover:bg-kreadika-royal group-hover:text-white">
                       {artikel.badge}
                     </span>
-                    <h4 className="mt-4 text-lg font-bold text-kreadika-navy">
+                    <h4 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                       {artikel.title}
                     </h4>
                     <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
@@ -340,20 +340,20 @@ function CallForPapers({ onNavigate }) {
             {ruangLingkup.map((item, index) => (
               <div
                 key={item.no}
-                className={`flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition hover:shadow-md ${
+                className={`group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 ${
                   index === 6 ? "sm:col-span-2 lg:col-span-1" : ""
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-ice text-sm font-bold text-kreadika-royal">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-ice text-sm font-bold text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                       0{item.no}
                     </span>
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/70">
                       Topik 0{item.no}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-base font-bold text-kreadika-navy">
+                  <h3 className="mt-4 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -391,19 +391,19 @@ function CallForPapers({ onNavigate }) {
             {timelineDates.map((item, index) => (
               <div
                 key={index}
-                className={`relative flex flex-col justify-between rounded-2xl p-5.5 transition ${
+                className={`group relative flex flex-col justify-between rounded-2xl p-5.5 transition-all duration-300 hover:-translate-y-1 ${
                   item.highlight
-                    ? "bg-kreadika-navy text-white ring-2 ring-kreadika-royal shadow-md"
-                    : "border border-blue-100 bg-white shadow-xs hover:border-kreadika-royal/40"
+                    ? "bg-kreadika-navy text-white ring-2 ring-kreadika-royal shadow-md hover:shadow-xl hover:shadow-kreadika-navy/25"
+                    : "border border-blue-100 bg-white shadow-xs hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5"
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between">
                     <span
-                      className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${
+                      className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold transition-all duration-300 ${
                         item.highlight
-                          ? "bg-white/15 text-sky-200"
-                          : "bg-kreadika-ice text-kreadika-royal"
+                          ? "bg-white/15 text-sky-200 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white"
+                          : "bg-kreadika-ice text-kreadika-royal group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white"
                       }`}
                     >
                       {item.step}
@@ -416,8 +416,10 @@ function CallForPapers({ onNavigate }) {
                   </div>
 
                   <h3
-                    className={`mt-4 text-sm font-bold leading-snug ${
-                      item.highlight ? "text-white" : "text-kreadika-navy"
+                    className={`mt-4 text-sm font-bold leading-snug transition-colors duration-200 ${
+                      item.highlight
+                        ? "text-white"
+                        : "text-kreadika-navy group-hover:text-kreadika-royal"
                     }`}
                   >
                     {item.label}
@@ -449,9 +451,9 @@ function CallForPapers({ onNavigate }) {
           </div>
 
           {/* Timeline Bottom Notification */}
-          <div className="mt-6 flex flex-col gap-2 rounded-xl border border-blue-100 bg-kreadika-ice/60 px-5 py-3.5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col gap-2 rounded-xl border border-blue-100 bg-kreadika-ice/60 px-5 py-3.5 text-xs text-slate-600 transition-shadow duration-300 hover:shadow-sm sm:flex-row sm:items-center sm:justify-between">
             <span className="flex items-center gap-2">
-              <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+              <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Seluruh batas waktu dan kegiatan menggunakan zona Waktu Indonesia
               Barat (WIB).
             </span>
@@ -485,9 +487,9 @@ function CallForPapers({ onNavigate }) {
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Prosiding */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -502,7 +504,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Prosiding KREADIKA 2027
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -513,16 +515,22 @@ function CallForPapers({ onNavigate }) {
               <a
                 href="/prosiding"
                 onClick={(e) => handleClick(e, "/prosiding")}
-                className="mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
               >
-                Informasi prosiding <span aria-hidden="true">→</span>
+                Informasi prosiding{" "}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover/link:translate-x-1"
+                >
+                  →
+                </span>
               </a>
             </div>
 
             {/* Rekomendasi Jurnal */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -537,7 +545,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Rekomendasi Jurnal Mitra
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -551,16 +559,22 @@ function CallForPapers({ onNavigate }) {
               <a
                 href="/mitra"
                 onClick={(e) => handleClick(e, "/mitra")}
-                className="mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
               >
-                Lihat daftar mitra <span aria-hidden="true">→</span>
+                Lihat daftar mitra{" "}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover/link:translate-x-1"
+                >
+                  →
+                </span>
               </a>
             </div>
 
             {/* Sertifikat */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -575,7 +589,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Sertifikat Resmi
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -586,9 +600,15 @@ function CallForPapers({ onNavigate }) {
               <a
                 href="/pendaftaran"
                 onClick={(e) => handleClick(e, "/pendaftaran")}
-                className="mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
               >
-                Informasi kepesertaan <span aria-hidden="true">→</span>
+                Informasi kepesertaan{" "}
+                <span
+                  aria-hidden="true"
+                  className="transition-transform duration-300 group-hover/link:translate-x-1"
+                >
+                  →
+                </span>
               </a>
             </div>
           </div>
@@ -619,7 +639,7 @@ function CallForPapers({ onNavigate }) {
               Ketentuan Umum
             </h3>
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Bahasa
                 </p>
@@ -631,7 +651,7 @@ function CallForPapers({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Panjang Naskah
                 </p>
@@ -643,7 +663,7 @@ function CallForPapers({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Tipografi &amp; Spasi
                 </p>
@@ -655,7 +675,7 @@ function CallForPapers({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Gaya Sitasi
                 </p>
@@ -667,7 +687,7 @@ function CallForPapers({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Daftar Pustaka
                 </p>
@@ -679,7 +699,7 @@ function CallForPapers({ onNavigate }) {
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4">
+              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
                   Kemiripan &amp; Sistem
                 </p>
@@ -696,9 +716,9 @@ function CallForPapers({ onNavigate }) {
           {/* Sistematika Penulisan (2 Kolom) */}
           <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Format 1: Penelitian & Konseptual */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 sm:p-8 shadow-xs">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white transition-transform duration-300 group-hover:scale-110">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -713,7 +733,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </span>
-                <h3 className="text-lg font-bold text-kreadika-navy">
+                <h3 className="text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Artikel Penelitian dan Konseptual
                 </h3>
               </div>
@@ -765,9 +785,9 @@ function CallForPapers({ onNavigate }) {
             </div>
 
             {/* Format 2: Praktik Baik */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 sm:p-8 shadow-xs">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white">
+                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white transition-transform duration-300 group-hover:scale-110">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -782,7 +802,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </span>
-                <h3 className="text-lg font-bold text-kreadika-navy">
+                <h3 className="text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Artikel Praktik Baik (Best Practice)
                 </h3>
               </div>
@@ -852,13 +872,13 @@ function CallForPapers({ onNavigate }) {
             {submissionSteps.map((item) => (
               <div
                 key={item.step}
-                className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7 shadow-xs"
+                className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7"
               >
                 <div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-royal text-sm font-bold text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-royal text-sm font-bold text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal-dark">
                     {item.step}
                   </span>
-                  <h3 className="mt-5 text-base font-bold text-kreadika-navy">
+                  <h3 className="mt-5 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -870,7 +890,7 @@ function CallForPapers({ onNavigate }) {
           </div>
 
           {/* Independensi Review Callout */}
-          <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-6 shadow-xs sm:p-8">
+          <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-md sm:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
                 <svg
@@ -909,7 +929,7 @@ function CallForPapers({ onNavigate }) {
       ==================== */}
       <section id="kirim" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12 shadow-sm">
+          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <span className="inline-block rounded-md bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-200">
@@ -930,17 +950,20 @@ function CallForPapers({ onNavigate }) {
                   onClick={(e) =>
                     handleClick(e, "https://kreadika.id/call-for-papers#kirim")
                   }
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  className="group inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   Kirim melalui OJS
-                  <span aria-hidden="true" className="ml-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"
+                  >
                     →
                   </span>
                 </a>
                 <a
                   href="https://kreadika.id/kontak"
                   onClick={(e) => handleClick(e, "/kontak")}
-                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white transition hover:bg-white/20"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/20 hover:shadow-lg hover:shadow-black/15 active:translate-y-0 active:scale-[0.98]"
                 >
                   Unduh template makalah
                 </a>

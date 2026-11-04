@@ -22,8 +22,8 @@ function Kontak({ onNavigate }) {
       <section className="bg-kreadika-navy text-white">
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               Kontak
             </span>
 
@@ -59,11 +59,11 @@ function Kontak({ onNavigate }) {
             {/* Content Cards */}
             <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-7">
               {/* Alamat Sekretariat */}
-              <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6">
+              <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                   Alamat Kantor
                 </p>
-                <h3 className="mt-2 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-2 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Scientific Advantage Publishing
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -74,7 +74,7 @@ function Kontak({ onNavigate }) {
               </div>
 
               {/* Kontak Langsung */}
-              <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6">
+              <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
                 <div>
                   <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                     Kontak Langsung
@@ -86,7 +86,7 @@ function Kontak({ onNavigate }) {
                       </span>
                       <a
                         href="mailto:sekretariat@kreadika.id"
-                        className="text-base font-semibold text-kreadika-royal hover:underline"
+                        className="text-base font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark hover:underline underline-offset-4"
                       >
                         sekretariat@kreadika.id
                       </a>
@@ -126,7 +126,7 @@ function Kontak({ onNavigate }) {
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* Template Makalah */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-8">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-8">
               <div>
                 <div className="flex items-center justify-between">
                   <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
@@ -136,7 +136,7 @@ function Kontak({ onNavigate }) {
                     [segera tersedia]
                   </span>
                 </div>
-                <h3 className="mt-3 text-xl font-bold text-kreadika-navy">
+                <h3 className="mt-3 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Template makalah
                 </h3>
               </div>
@@ -146,10 +146,13 @@ function Kontak({ onNavigate }) {
                   onClick={(e) =>
                     handleClick(e, "/call-for-papers#ketentuan")
                   }
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  className="group/btn inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   Template makalah
-                  <span aria-hidden="true" className="ml-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform duration-300 group-hover/btn:translate-x-1"
+                  >
                     →
                   </span>
                 </a>
@@ -157,7 +160,7 @@ function Kontak({ onNavigate }) {
             </div>
 
             {/* Poster Call for Papers */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-8">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-8">
               <div>
                 <div className="flex items-center justify-between">
                   <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
@@ -167,7 +170,7 @@ function Kontak({ onNavigate }) {
                     [segera tersedia]
                   </span>
                 </div>
-                <h3 className="mt-3 text-xl font-bold text-kreadika-navy">
+                <h3 className="mt-3 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Poster call for papers
                 </h3>
               </div>
@@ -186,7 +189,7 @@ function Kontak({ onNavigate }) {
       ==================== */}
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12">
+          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <span className="inline-block rounded-md bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-200">
@@ -199,7 +202,7 @@ function Kontak({ onNavigate }) {
 
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 shrink-0">
                 {/* Instagram */}
-                <div className="flex flex-col rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-white">
+                <div className="flex flex-col rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/40 hover:bg-white/15 hover:shadow-lg hover:shadow-black/20">
                   <p className="text-xs uppercase tracking-wider text-sky-300">
                     Instagram
                   </p>
@@ -207,7 +210,7 @@ function Kontak({ onNavigate }) {
                 </div>
 
                 {/* YouTube */}
-                <div className="flex flex-col rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-white">
+                <div className="flex flex-col rounded-xl border border-white/20 bg-white/10 px-6 py-4 text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-sky-300/40 hover:bg-white/15 hover:shadow-lg hover:shadow-black/20">
                   <p className="text-xs uppercase tracking-wider text-sky-300">
                     YouTube
                   </p>

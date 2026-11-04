@@ -8,8 +8,8 @@ function Panitia() {
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
             {/* Breadcrumb / Category Badge */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               KREADIKA 2027
             </span>
 
@@ -61,7 +61,7 @@ function Panitia() {
                 pelaksana memastikan seluruh rangkaian seminar luring maupun
                 daring berjalan tertib, inklusif, dan tepat waktu.
               </p>
-              <div className="rounded-2xl border border-blue-100 bg-kreadika-ice p-5 text-sm text-kreadika-navy">
+              <div className="rounded-2xl border border-blue-100 bg-kreadika-ice p-5 text-sm text-kreadika-navy transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-sm">
                 <p className="font-medium italic text-slate-700">
                   “Sinergi antara pemangku kebijakan, ilmuwan pendidikan, dan
                   guru di garis depan adalah kunci lahirnya pendidikan yang
@@ -93,13 +93,13 @@ function Panitia() {
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Keynote 1: Kebijakan */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7">
               <div>
                 {/* Speaker Photo Placeholder */}
-                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50">
+                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
                   <div className="flex flex-col items-center gap-2 text-slate-400">
                     <svg
-                      className="h-10 w-10 text-slate-300"
+                      className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -111,7 +111,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400">
+                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
                       [Foto Pembicara]
                     </span>
                   </div>
@@ -119,10 +119,10 @@ function Panitia() {
 
                 {/* Speaker Info */}
                 <div className="mt-5">
-                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100">
+                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100 transition-colors duration-200 group-hover:bg-kreadika-royal group-hover:text-white group-hover:border-kreadika-royal">
                     Perspektif Kebijakan
                   </span>
-                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy">
+                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                     [Nama pembicara]
                   </h3>
                   <p className="mt-1 text-sm font-medium text-slate-600">
@@ -134,13 +134,13 @@ function Panitia() {
             </div>
 
             {/* Keynote 2: Akademisi */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7">
               <div>
                 {/* Speaker Photo Placeholder */}
-                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50">
+                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
                   <div className="flex flex-col items-center gap-2 text-slate-400">
                     <svg
-                      className="h-10 w-10 text-slate-300"
+                      className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -152,7 +152,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400">
+                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
                       [Foto Pembicara]
                     </span>
                   </div>
@@ -160,10 +160,10 @@ function Panitia() {
 
                 {/* Speaker Info */}
                 <div className="mt-5">
-                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100">
+                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100 transition-colors duration-200 group-hover:bg-kreadika-royal group-hover:text-white group-hover:border-kreadika-royal">
                     Perspektif Akademik
                   </span>
-                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy">
+                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                     [Nama pembicara]
                   </h3>
                   <p className="mt-1 text-sm font-medium text-slate-600">
@@ -174,13 +174,13 @@ function Panitia() {
             </div>
 
             {/* Keynote 3: Praktisi */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7">
               <div>
                 {/* Speaker Photo Placeholder */}
-                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50">
+                <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
                   <div className="flex flex-col items-center gap-2 text-slate-400">
                     <svg
-                      className="h-10 w-10 text-slate-300"
+                      className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -192,7 +192,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400">
+                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
                       [Foto Pembicara]
                     </span>
                   </div>
@@ -200,10 +200,10 @@ function Panitia() {
 
                 {/* Speaker Info */}
                 <div className="mt-5">
-                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100">
+                  <span className="inline-block rounded-md bg-sky-50 px-2.5 py-1 text-xs font-semibold text-kreadika-royal border border-blue-100 transition-colors duration-200 group-hover:bg-kreadika-royal group-hover:text-white group-hover:border-kreadika-royal">
                     Perspektif Praktik Baik
                   </span>
-                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy">
+                  <h3 className="mt-3 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                     [Nama pembicara]
                   </h3>
                   <p className="mt-1 text-sm font-medium text-slate-600">
@@ -239,8 +239,8 @@ function Panitia() {
           {/* Scientific Committee Member Cards */}
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {/* Member 1 */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -260,7 +260,7 @@ function Panitia() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-lg font-bold text-kreadika-navy">
+              <h3 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 [Nama]
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -274,8 +274,8 @@ function Panitia() {
             </div>
 
             {/* Member 2 */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -295,7 +295,7 @@ function Panitia() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-lg font-bold text-kreadika-navy">
+              <h3 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 [Nama]
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -309,8 +309,8 @@ function Panitia() {
             </div>
 
             {/* Member 3 */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -330,7 +330,7 @@ function Panitia() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-lg font-bold text-kreadika-navy">
+              <h3 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 [Nama]
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -344,8 +344,8 @@ function Panitia() {
             </div>
 
             {/* Member 4 */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm">
-              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                 <svg
                   className="h-6 w-6"
                   fill="none"
@@ -365,7 +365,7 @@ function Panitia() {
                   />
                 </svg>
               </div>
-              <h3 className="mt-4 text-lg font-bold text-kreadika-navy">
+              <h3 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 [Nama]
               </h3>
               <p className="mt-1 text-sm font-medium text-slate-500">
@@ -399,7 +399,7 @@ function Panitia() {
           </div>
 
           {/* Committee Table (Desktop) */}
-          <div className="mt-10 hidden overflow-hidden rounded-2xl border border-blue-100 bg-white md:block">
+          <div className="mt-10 hidden overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xs md:block">
             <table className="w-full text-left text-sm text-slate-600">
               <thead className="border-b border-blue-100 bg-slate-50 text-xs font-bold uppercase tracking-wider text-kreadika-navy">
                 <tr>
@@ -413,7 +413,7 @@ function Panitia() {
               </thead>
               <tbody className="divide-y divide-blue-50">
                 {/* Row 1: Pengarah */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Pengarah
                   </td>
@@ -423,7 +423,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 2: Penanggung jawab */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Penanggung jawab
                   </td>
@@ -433,7 +433,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 3: Ketua */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Ketua
                   </td>
@@ -443,7 +443,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 4: Sekretaris */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Sekretaris
                   </td>
@@ -453,7 +453,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 5: Bendahara */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bendahara
                   </td>
@@ -463,7 +463,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 6: Bidang Acara dan Pembicara */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bidang Acara dan Pembicara
                   </td>
@@ -473,7 +473,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 7: Bidang Makalah dan Prosiding */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bidang Makalah dan Prosiding
                   </td>
@@ -483,7 +483,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 8: Bidang Publikasi, Humas, dan Media Sosial */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bidang Publikasi, Humas, dan Media Sosial
                   </td>
@@ -493,7 +493,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 9: Bidang Teknologi Informasi */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bidang Teknologi Informasi
                   </td>
@@ -503,7 +503,7 @@ function Panitia() {
                 </tr>
 
                 {/* Row 10: Bidang Sponsor dan Kemitraan */}
-                <tr className="hover:bg-blue-50/40">
+                <tr className="transition-colors duration-200 hover:bg-kreadika-ice/70">
                   <td className="px-6 py-4 font-bold text-kreadika-navy">
                     Bidang Sponsor dan Kemitraan
                   </td>
@@ -518,7 +518,7 @@ function Panitia() {
           {/* Committee Cards (Mobile) */}
           <div className="mt-8 space-y-3 md:hidden">
             {/* Card 1 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Pengarah
               </p>
@@ -528,7 +528,7 @@ function Panitia() {
             </div>
 
             {/* Card 2 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Penanggung jawab
               </p>
@@ -538,7 +538,7 @@ function Panitia() {
             </div>
 
             {/* Card 3 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Ketua
               </p>
@@ -548,7 +548,7 @@ function Panitia() {
             </div>
 
             {/* Card 4 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Sekretaris
               </p>
@@ -558,7 +558,7 @@ function Panitia() {
             </div>
 
             {/* Card 5 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bendahara
               </p>
@@ -568,7 +568,7 @@ function Panitia() {
             </div>
 
             {/* Card 6 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bidang Acara dan Pembicara
               </p>
@@ -578,7 +578,7 @@ function Panitia() {
             </div>
 
             {/* Card 7 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bidang Makalah dan Prosiding
               </p>
@@ -588,7 +588,7 @@ function Panitia() {
             </div>
 
             {/* Card 8 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bidang Publikasi, Humas, dan Media Sosial
               </p>
@@ -598,7 +598,7 @@ function Panitia() {
             </div>
 
             {/* Card 9 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bidang Teknologi Informasi
               </p>
@@ -608,7 +608,7 @@ function Panitia() {
             </div>
 
             {/* Card 10 */}
-            <div className="rounded-2xl border border-blue-100 bg-white p-5">
+            <div className="rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:shadow-sm">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Bidang Sponsor dan Kemitraan
               </p>
@@ -619,7 +619,7 @@ function Panitia() {
           </div>
 
           {/* Partnership CTA Banner */}
-          <div className="mt-10 rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12">
+          <div className="mt-10 rounded-2xl bg-kreadika-navy px-6 py-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <h3 className="text-2xl font-bold text-white">
@@ -633,10 +633,13 @@ function Panitia() {
               <div className="shrink-0">
                 <a
                   href="mailto:sekretariat@kreadika.id"
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-6 py-3.5 text-sm font-semibold text-white hover:bg-kreadika-royal-dark"
+                  className="group inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   Hubungi Sekretariat{" "}
-                  <span aria-hidden="true" className="ml-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"
+                  >
                     →
                   </span>
                 </a>

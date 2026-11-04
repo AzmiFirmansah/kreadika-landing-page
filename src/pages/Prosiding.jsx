@@ -22,8 +22,8 @@ function Prosiding({ onNavigate }) {
       <section className="bg-kreadika-navy text-white">
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               Publikasi
             </span>
 
@@ -65,7 +65,7 @@ function Prosiding({ onNavigate }) {
                 penyelenggaraan seminar. Setiap artikel direview oleh Komite
                 Ilmiah dan memperoleh DOI melalui Crossref.
               </p>
-              <div className="rounded-2xl border border-blue-100 bg-kreadika-ice p-5 text-sm text-kreadika-navy">
+              <div className="rounded-2xl border border-blue-100 bg-kreadika-ice p-5 text-sm text-kreadika-navy transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-sm">
                 <p className="font-medium text-slate-700">
                   Artikel terbaik direkomendasikan ke jurnal mitra.
                 </p>
@@ -91,51 +91,51 @@ function Prosiding({ onNavigate }) {
 
           <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {/* ISSN */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 ISSN
               </p>
-              <p className="mt-2 text-xl font-bold text-kreadika-navy">
+              <p className="mt-2 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 [dalam proses pengajuan]
               </p>
             </div>
 
             {/* DOI */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 DOI
               </p>
-              <p className="mt-2 text-xl font-bold text-kreadika-navy">
+              <p className="mt-2 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 Setiap artikel
               </p>
             </div>
 
             {/* Akses */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Akses
               </p>
-              <p className="mt-2 text-xl font-bold text-kreadika-navy">
+              <p className="mt-2 text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                 Terbuka (open access)
               </p>
             </div>
 
             {/* Pengiriman dan review */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 sm:col-span-2 lg:col-span-2">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:col-span-2 lg:col-span-2">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Pengiriman dan review
               </p>
-              <p className="mt-2 text-base font-bold text-kreadika-navy sm:text-lg">
+              <p className="mt-2 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal sm:text-lg">
                 Melalui sistem OJS prosiding KREADIKA
               </p>
             </div>
 
             {/* Rekomendasi Jurnal */}
-            <div className="flex flex-col rounded-2xl border border-blue-100 bg-white p-6 sm:col-span-2 lg:col-span-1">
+            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:col-span-2 lg:col-span-1">
               <p className="text-xs font-semibold uppercase tracking-wider text-sky-600">
                 Rekomendasi
               </p>
-              <p className="mt-2 text-base font-bold text-kreadika-navy sm:text-lg">
+              <p className="mt-2 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal sm:text-lg">
                 Artikel terbaik direkomendasikan ke jurnal mitra.
               </p>
             </div>
@@ -148,7 +148,7 @@ function Prosiding({ onNavigate }) {
       ==================== */}
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12">
+          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <span className="inline-block rounded-md bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-200">
@@ -165,20 +165,26 @@ function Prosiding({ onNavigate }) {
                 <a
                   href="https://kreadika.id/prosiding"
                   onClick={(e) => handleClick(e, "/prosiding")}
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-blue-700"
+                  className="group inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   Lihat arsip prosiding
-                  <span aria-hidden="true" className="ml-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"
+                  >
                     →
                   </span>
                 </a>
                 <a
                   href="https://kreadika.id/call-for-papers#ketentuan"
                   onClick={(e) => handleClick(e, "/call-for-papers#ketentuan")}
-                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-white/20"
+                  className="group inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/20 hover:shadow-lg hover:shadow-black/15 active:translate-y-0 active:scale-[0.98]"
                 >
                   Ketentuan makalah
-                  <span aria-hidden="true" className="ml-1.5">
+                  <span
+                    aria-hidden="true"
+                    className="ml-1.5 transition-transform duration-300 group-hover:translate-x-1"
+                  >
                     →
                   </span>
                 </a>

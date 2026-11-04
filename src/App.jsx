@@ -98,9 +98,11 @@ function App() {
         }
       }, 50);
     } else {
-      window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
+
+  const activeRouteKey = currentPath.split("#")[0] || "/";
 
   // Route selector
   const renderMainContent = () => {
@@ -141,7 +143,9 @@ function App() {
       {/* ==================== 
           MAIN CONTENT (ROUTER)
       ==================== */}
-      {renderMainContent()}
+      <div key={activeRouteKey} className="animate-page-enter">
+        {renderMainContent()}
+      </div>
 
       {/* ==================== 
           FOOTER

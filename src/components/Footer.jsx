@@ -14,7 +14,7 @@ function Footer({ onNavigate }) {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           {/* Brand & Organizer Info */}
           <div className="md:col-span-5">
-            <div className="inline-block rounded-xl bg-white px-4 py-2.5">
+            <div className="inline-block rounded-xl bg-white px-4 py-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-black/20">
               <img
                 src={logoKreadika}
                 alt="Logo KREADIKA"
@@ -45,7 +45,7 @@ function Footer({ onNavigate }) {
                 <span className="block text-xs text-blue-300">Surel</span>
                 <a
                   href="mailto:sekretariat@kreadika.id"
-                  className="font-medium text-white"
+                  className="font-medium text-white transition-colors duration-200 hover:text-kreadika-sky hover:underline underline-offset-4"
                 >
                   sekretariat@kreadika.id
                 </a>
@@ -69,7 +69,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/call-for-papers"
                   onClick={(e) => handleClick(e, "/call-for-papers")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Call for Papers
                 </a>
@@ -78,7 +78,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/pendaftaran"
                   onClick={(e) => handleClick(e, "/pendaftaran")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Pendaftaran
                 </a>
@@ -87,7 +87,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/pendaftaran-online"
                   onClick={(e) => handleClick(e, "/pendaftaran-online")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Pendaftaran Online
                 </a>
@@ -96,7 +96,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/prosiding"
                   onClick={(e) => handleClick(e, "/prosiding")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Prosiding
                 </a>
@@ -105,7 +105,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/mitra"
                   onClick={(e) => handleClick(e, "/mitra")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Mitra &amp; Kerja Sama
                 </a>
@@ -114,7 +114,7 @@ function Footer({ onNavigate }) {
                 <a
                   href="/kontak"
                   onClick={(e) => handleClick(e, "/kontak")}
-                  className="text-blue-100"
+                  className="inline-block text-blue-100 transition-all duration-200 hover:translate-x-1 hover:text-white"
                 >
                   Kontak
                 </a>

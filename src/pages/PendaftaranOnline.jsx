@@ -15,8 +15,8 @@ function PendaftaranOnline({ onNavigate }) {
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
             {/* Breadcrumb / Category Badge */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               KREADIKA 2027
             </span>
 
@@ -54,7 +54,7 @@ function PendaftaranOnline({ onNavigate }) {
           </div>
 
           {/* Announcement Card */}
-          <div className="mt-10 rounded-2xl border border-blue-100 bg-kreadika-ice/60 p-6 sm:p-8">
+          <div className="mt-10 rounded-2xl border border-blue-100 bg-kreadika-ice/60 p-6 transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-md hover:shadow-blue-950/5 sm:p-8">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="flex items-start gap-4">
                 <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white text-kreadika-royal shadow-xs">
@@ -120,10 +120,10 @@ function PendaftaranOnline({ onNavigate }) {
           {/* Preparation Cards */}
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {/* Card 1: ID Submission OJS & Judul Makalah */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7 shadow-xs">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7">
               <div>
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-royal text-white shadow-xs">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-royal text-white shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal-dark">
                     <svg
                       className="h-5 w-5"
                       fill="none"
@@ -143,7 +143,7 @@ function PendaftaranOnline({ onNavigate }) {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   ID submission OJS dan judul makalah
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -155,10 +155,10 @@ function PendaftaranOnline({ onNavigate }) {
             </div>
 
             {/* Card 2: Bukti Pembayaran */}
-            <div className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7 shadow-xs">
+            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7">
               <div>
                 <div className="flex items-center justify-between gap-4">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-royal text-white shadow-xs">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-royal text-white shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal-dark">
                     <svg
                       className="h-5 w-5"
                       fill="none"
@@ -178,7 +178,7 @@ function PendaftaranOnline({ onNavigate }) {
                   </span>
                 </div>
 
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                   Bukti pembayaran
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -191,7 +191,7 @@ function PendaftaranOnline({ onNavigate }) {
           </div>
 
           {/* Biaya Pendaftaran Callout Banner */}
-          <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-blue-100 bg-white p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6 shadow-xs">
+          <div className="mt-8 flex flex-col gap-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-xs transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-md sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <div className="flex items-center gap-3.5">
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
                 <svg
@@ -219,9 +219,15 @@ function PendaftaranOnline({ onNavigate }) {
             <a
               href="/pendaftaran"
               onClick={(e) => handleClick(e, "/pendaftaran")}
-              className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-kreadika-royal hover:underline sm:self-auto shrink-0"
+              className="group inline-flex shrink-0 items-center gap-1.5 self-start text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark hover:underline sm:self-auto"
             >
-              Lihat biaya pendaftaran <span aria-hidden="true">→</span>
+              Lihat biaya pendaftaran{" "}
+              <span
+                aria-hidden="true"
+                className="transition-transform duration-300 group-hover:translate-x-1"
+              >
+                →
+              </span>
             </a>
           </div>
         </div>
@@ -232,7 +238,7 @@ function PendaftaranOnline({ onNavigate }) {
       ==================== */}
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12">
+          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -245,10 +251,10 @@ function PendaftaranOnline({ onNavigate }) {
               <div className="flex shrink-0 flex-wrap items-center gap-3">
                 <a
                   href="mailto:sekretariat@kreadika.id"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-600"
+                  className="group inline-flex items-center justify-center gap-2 rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   <svg
-                    className="h-4 w-4"
+                    className="h-4 w-4 transition-transform duration-300 group-hover:scale-110"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -265,7 +271,7 @@ function PendaftaranOnline({ onNavigate }) {
                 <a
                   href="/pendaftaran"
                   onClick={(e) => handleClick(e, "/pendaftaran")}
-                  className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 hover:shadow-lg hover:shadow-black/15 active:translate-y-0 active:scale-[0.98]"
                 >
                   Lihat biaya pendaftaran
                 </a>

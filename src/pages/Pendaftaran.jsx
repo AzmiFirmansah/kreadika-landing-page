@@ -39,8 +39,8 @@ function Pendaftaran({ onNavigate }) {
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
           <div className="max-w-3xl">
             {/* Breadcrumb / Category Badge */}
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200">
-              <span className="h-2 w-2 rounded-full bg-sky-300"></span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
+              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
               KREADIKA 2027
             </span>
 
@@ -73,7 +73,7 @@ function Pendaftaran({ onNavigate }) {
           </div>
 
           {/* Tabel Biaya */}
-          <div className="mt-10 overflow-hidden rounded-2xl border border-blue-100 bg-white">
+          <div className="mt-10 overflow-hidden rounded-2xl border border-blue-100 bg-white shadow-xs transition-shadow duration-300 hover:shadow-md hover:shadow-blue-950/5">
             <div className="overflow-x-auto">
               <table className="w-full border-collapse text-left text-sm">
                 <thead>
@@ -99,7 +99,9 @@ function Pendaftaran({ onNavigate }) {
                   {biayaList.map((item, index) => (
                     <tr
                       key={index}
-                      className={index % 2 === 0 ? "bg-white" : "bg-slate-50/50"}
+                      className={`transition-colors duration-200 hover:bg-kreadika-ice/70 ${
+                        index % 2 === 0 ? "bg-white" : "bg-slate-50/50"
+                      }`}
                     >
                       <td className="px-6 py-5 font-medium text-kreadika-navy">
                         {item.kategori}
@@ -118,7 +120,7 @@ function Pendaftaran({ onNavigate }) {
           </div>
 
           {/* Keterangan Pemakalah & Peserta */}
-          <div className="mt-6 rounded-2xl border border-blue-100 bg-kreadika-ice p-5 sm:p-6 text-sm text-kreadika-navy">
+          <div className="mt-6 rounded-2xl border border-blue-100 bg-kreadika-ice p-5 text-sm text-kreadika-navy transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-sm sm:p-6">
             <p className="leading-relaxed">
               Pemakalah adalah penulis yang abstraknya diterima. Peserta
               mengikuti seminar tanpa membawakan makalah.
@@ -145,10 +147,10 @@ function Pendaftaran({ onNavigate }) {
             {caraMendaftarList.map((langkah, index) => (
               <div
                 key={index}
-                className="flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 sm:p-7"
+                className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7"
               >
                 <div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-royal text-sm font-bold text-white">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-royal text-sm font-bold text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal-dark">
                     {index + 1}
                   </span>
                   <p className="mt-5 text-sm leading-relaxed text-slate-600">
@@ -166,7 +168,7 @@ function Pendaftaran({ onNavigate }) {
       ==================== */}
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 sm:px-10 sm:py-12">
+          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
                 <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
@@ -180,13 +182,13 @@ function Pendaftaran({ onNavigate }) {
                 <a
                   href="/pendaftaran-online"
                   onClick={(e) => handleClick(e, "/pendaftaran-online")}
-                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white transition hover:bg-blue-600"
+                  className="inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
                 >
                   Isi formulir pendaftaran
                 </a>
                 <a
                   href="mailto:sekretariat@kreadika.id"
-                  className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white"
+                  className="inline-flex items-center justify-center rounded-lg border border-white/25 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 hover:shadow-lg hover:shadow-black/15 active:translate-y-0 active:scale-[0.98]"
                 >
                   Pertanyaan: sekretariat@kreadika.id
                 </a>
