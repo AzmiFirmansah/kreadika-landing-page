@@ -349,7 +349,7 @@ function CallForPapers({ onNavigate }) {
                     <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-ice text-sm font-bold text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                       0{item.no}
                     </span>
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/70">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                       Topik 0{item.no}
                     </span>
                   </div>
@@ -432,8 +432,8 @@ function CallForPapers({ onNavigate }) {
                   }`}
                 >
                   <p
-                    className={`text-xs uppercase tracking-wider ${
-                      item.highlight ? "text-sky-300" : "text-slate-400"
+                    className={`text-xs font-semibold uppercase tracking-wider ${
+                      item.highlight ? "text-sky-300" : "text-slate-600"
                     }`}
                   >
                     Jadwal

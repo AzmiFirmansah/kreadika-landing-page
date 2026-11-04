@@ -203,13 +203,13 @@ function Home({ onNavigate }) {
                 Co-host
               </p>
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
-                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-medium text-slate-500 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
+                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
                   [logo co-host]
                 </div>
-                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-medium text-slate-500 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
+                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
                   [logo co-host]
                 </div>
-                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-medium text-slate-500 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
+                <div className="flex h-12 items-center justify-center rounded-xl border border-blue-100 bg-kreadika-ice px-5 text-xs font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-kreadika-royal/40 hover:bg-white hover:text-kreadika-navy hover:shadow-sm">
                   [logo organisasi profesi]
                 </div>
               </div>
@@ -343,7 +343,7 @@ function Home({ onNavigate }) {
                     <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-kreadika-ice text-xs font-bold text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
                       0{item.no}
                     </span>
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/70">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                       Subtema 0{item.no}
                     </span>
                   </div>
@@ -425,8 +425,8 @@ function Home({ onNavigate }) {
                     }`}
                   >
                     <p
-                      className={`text-xs uppercase tracking-wider ${
-                        item.highlight ? "text-sky-300" : "text-slate-400"
+                      className={`text-xs font-semibold uppercase tracking-wider ${
+                        item.highlight ? "text-sky-300" : "text-slate-600"
                       }`}
                     >
                       Jadwal
@@ -632,7 +632,7 @@ function Home({ onNavigate }) {
             <li className="flex flex-col rounded-2xl bg-kreadika-royal p-5 text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-kreadika-royal/30">
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xl font-bold">2027</span>
-                <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold">
+                <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-bold text-kreadika-navy shadow-xs">
                   Tahun ini
                 </span>
               </div>
@@ -641,7 +641,7 @@ function Home({ onNavigate }) {
               </p>
             </li>
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2028
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -649,7 +649,7 @@ function Home({ onNavigate }) {
               </p>
             </li>
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2029
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -657,7 +657,7 @@ function Home({ onNavigate }) {
               </p>
             </li>
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2030
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -666,7 +666,7 @@ function Home({ onNavigate }) {
               </p>
             </li>
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2031
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">

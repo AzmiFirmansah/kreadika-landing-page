@@ -95,7 +95,7 @@ function Mitra() {
                 <div>
                   {/* Logo Placeholder */}
                   <div className="flex h-36 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
-                    <div className="flex flex-col items-center gap-2 text-slate-400">
+                    <div className="flex flex-col items-center gap-2 text-slate-500">
                       <svg
                         className="h-8 w-8 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                         fill="none"
@@ -109,7 +109,7 @@ function Mitra() {
                           d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                         />
                       </svg>
-                      <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
+                      <span className="font-mono text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                         [logo]
                       </span>
                     </div>
@@ -120,7 +120,7 @@ function Mitra() {
                     <h3 className="text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                       {item.nama}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-slate-500">
+                    <p className="mt-1 text-sm font-medium text-slate-600">
                       {item.kategori}
                     </p>
                   </div>
@@ -158,7 +158,7 @@ function Mitra() {
                 <div>
                   {/* Logo Placeholder */}
                   <div className="flex h-36 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-slate-50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice/70">
-                    <div className="flex flex-col items-center gap-2 text-slate-400">
+                    <div className="flex flex-col items-center gap-2 text-slate-500">
                       <svg
                         className="h-8 w-8 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                         fill="none"
@@ -172,7 +172,7 @@ function Mitra() {
                           d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
                         />
                       </svg>
-                      <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
+                      <span className="font-mono text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                         [logo]
                       </span>
                     </div>
@@ -183,7 +183,7 @@ function Mitra() {
                     <h3 className="text-xl font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
                       {item.nama}
                     </h3>
-                    <p className="mt-1 text-sm font-medium text-slate-500">
+                    <p className="mt-1 text-sm font-medium text-slate-600">
                       {item.kategori}
                     </p>
                   </div>

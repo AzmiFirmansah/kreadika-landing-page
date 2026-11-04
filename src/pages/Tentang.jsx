@@ -395,7 +395,7 @@ function Tentang({ onNavigate }) {
             <li className="flex flex-col rounded-2xl bg-kreadika-royal p-5 text-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-kreadika-royal/30">
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xl font-bold">2027</span>
-                <span className="rounded-full bg-white/20 px-2.5 py-0.5 text-[11px] font-semibold">
+                <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-bold text-kreadika-navy shadow-xs">
                   Tahun ini
                 </span>
               </div>
@@ -406,7 +406,7 @@ function Tentang({ onNavigate }) {
 
             {/* 2028 */}
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2028
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -416,7 +416,7 @@ function Tentang({ onNavigate }) {
 
             {/* 2029 */}
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2029
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -426,7 +426,7 @@ function Tentang({ onNavigate }) {
 
             {/* 2030 */}
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2030
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">
@@ -437,7 +437,7 @@ function Tentang({ onNavigate }) {
 
             {/* 2031 */}
             <li className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5">
-              <span className="text-xl font-bold text-kreadika-sky transition-colors duration-200 group-hover:text-kreadika-royal">
+              <span className="text-xl font-bold text-kreadika-royal transition-colors duration-200 group-hover:text-kreadika-royal-dark">
                 2031
               </span>
               <p className="mt-4 text-sm font-medium leading-snug text-kreadika-navy">

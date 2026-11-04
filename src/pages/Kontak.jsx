@@ -175,7 +175,7 @@ function Kontak({ onNavigate }) {
                 </h3>
               </div>
               <div className="mt-6">
-                <span className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-400 cursor-not-allowed">
+                <span className="inline-flex items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-5 py-3 text-sm font-semibold text-slate-600 cursor-not-allowed">
                   Poster call for papers [segera tersedia]
                 </span>
               </div>

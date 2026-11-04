@@ -97,7 +97,7 @@ function Panitia() {
               <div>
                 {/* Speaker Photo Placeholder */}
                 <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
-                  <div className="flex flex-col items-center gap-2 text-slate-400">
+                  <div className="flex flex-col items-center gap-2 text-slate-500">
                     <svg
                       className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
@@ -111,7 +111,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
+                    <span className="font-mono text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                       [Foto Pembicara]
                     </span>
                   </div>
@@ -138,7 +138,7 @@ function Panitia() {
               <div>
                 {/* Speaker Photo Placeholder */}
                 <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
-                  <div className="flex flex-col items-center gap-2 text-slate-400">
+                  <div className="flex flex-col items-center gap-2 text-slate-500">
                     <svg
                       className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
@@ -152,7 +152,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
+                    <span className="font-mono text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                       [Foto Pembicara]
                     </span>
                   </div>
@@ -178,7 +178,7 @@ function Panitia() {
               <div>
                 {/* Speaker Photo Placeholder */}
                 <div className="flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-blue-100 bg-kreadika-ice/50 transition-colors duration-300 group-hover:border-kreadika-royal/30 group-hover:bg-kreadika-ice">
-                  <div className="flex flex-col items-center gap-2 text-slate-400">
+                  <div className="flex flex-col items-center gap-2 text-slate-500">
                     <svg
                       className="h-10 w-10 text-slate-300 transition-all duration-300 group-hover:scale-110 group-hover:text-kreadika-royal/60"
                       fill="none"
@@ -192,7 +192,7 @@ function Panitia() {
                         d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
                       />
                     </svg>
-                    <span className="font-mono text-xs font-medium text-slate-400 transition-colors duration-200 group-hover:text-kreadika-royal/80">
+                    <span className="font-mono text-xs font-semibold text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
                       [Foto Pembicara]
                     </span>
                   </div>
