@@ -190,19 +190,27 @@ function CallForPapers({ onNavigate }) {
       {/* ==================== 
           HERO / PAGE HEADER (Identik dengan format Tentang KREADIKA)
       ==================== */}
-      <section className="bg-kreadika-navy text-white">
-        <div className="mx-auto max-w-6xl px-4 pt-12 pb-14 sm:px-6 sm:pt-16 sm:pb-20 lg:px-8">
+      <section className="relative overflow-hidden border-b border-kreadika-200/80 bg-linear-to-b from-kreadika-50 via-kreadika-50/40 to-white">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 overflow-hidden"
+        >
+          <div className="absolute -top-24 left-1/2 h-80 w-2xl -translate-x-1/2 rounded-full bg-kreadika-200/40 blur-3xl"></div>
+        </div>
+        <div className="relative mx-auto max-w-6xl px-4 pt-14 pb-14 sm:px-6 sm:pt-20 sm:pb-18 lg:px-8">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center gap-2 rounded-full border border-sky-400/30 bg-sky-400/10 px-4 py-1.5 text-xs font-semibold tracking-wide text-sky-200 transition-colors duration-300 hover:border-sky-300/50 hover:bg-sky-400/15">
-              <span className="h-2 w-2 rounded-full bg-sky-300 animate-pulse"></span>
-              KREADIKA 2027
+            <span className="inline-flex items-center gap-2 rounded-full border border-kreadika-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-kreadika-700 shadow-2xs transition-colors duration-300 hover:border-kreadika-300 hover:bg-kreadika-50">
+              <span className="h-2 w-2 rounded-full bg-kreadika-600 animate-pulse"></span>
+              <span>KREADIKA 2027</span>
+              <span aria-hidden="true" className="text-slate-600">•</span>
+              <span className="text-kreadika-600">Call for Papers</span>
             </span>
 
-            <h1 className="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-5xl lg:leading-[1.15]">
+            <h1 className="mt-5 text-3xl font-bold tracking-tight text-kreadika-800 sm:text-4xl lg:text-5xl lg:leading-[1.15]">
               Call for Papers
             </h1>
 
-            <p className="mt-4 text-base leading-relaxed text-blue-100 sm:text-lg">
+            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
               Tema: Pendidikan Kreatif dan Adaptif di Era Digital. Kami
               mengundang artikel hasil penelitian, kajian konseptual, dan
               praktik baik.
@@ -219,10 +227,10 @@ function CallForPapers({ onNavigate }) {
           {/* Headline & Narasi Undangan */}
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-12 lg:gap-12">
             <div className="lg:col-span-5">
-              <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+              <span className="inline-block rounded-full border border-kreadika-200 bg-kreadika-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700">
                 Undangan Terbuka
               </span>
-              <h2 className="mt-4 text-2xl font-bold leading-snug text-kreadika-navy sm:text-3xl">
+              <h2 className="mt-4 text-2xl font-bold leading-snug text-kreadika-800 sm:text-3xl">
                 Undangan Pengiriman Makalah KREADIKA 2027
               </h2>
             </div>
@@ -230,7 +238,7 @@ function CallForPapers({ onNavigate }) {
             <div className="space-y-4 text-base leading-relaxed text-slate-600 lg:col-span-7">
               <p>
                 Panitia{" "}
-                <strong className="font-semibold text-kreadika-navy">
+                <strong className="font-semibold text-kreadika-800">
                   KREADIKA 2027
                 </strong>{" "}
                 mengundang guru, tenaga kependidikan, pengawas sekolah, kepala
@@ -242,7 +250,8 @@ function CallForPapers({ onNavigate }) {
               <p>
                 Seminar ini menjadi ruang kolaborasi ilmiah nasional untuk
                 menyebarluaskan gagasan inovatif, temuan empiris, serta solusi
-                praktis dalam mendidik manusia di tengah transformasi era digital.
+                praktis dalam mendidik manusia di tengah transformasi era
+                digital.
               </p>
             </div>
           </div>
@@ -252,9 +261,9 @@ function CallForPapers({ onNavigate }) {
             {infoSeminar.map((item, index) => (
               <div
                 key={index}
-                className="group flex flex-col rounded-2xl border border-blue-100 bg-kreadika-ice/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:bg-white hover:shadow-md hover:shadow-blue-950/5"
+                className="group flex flex-col rounded-2xl border border-kreadika-200/80 bg-kreadika-50/40 p-5 shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-400 hover:bg-white hover:shadow-md hover:shadow-kreadika-800/5"
               >
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white text-kreadika-royal shadow-xs transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-kreadika-200/70 bg-white text-kreadika-600 shadow-2xs transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -265,13 +274,13 @@ function CallForPapers({ onNavigate }) {
                     {item.icon}
                   </svg>
                 </div>
-                <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-sky-700">
+                <p className="mt-4 text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   {item.label}
                 </p>
-                <p className="mt-1 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <p className="mt-1 text-base font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   {item.value}
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">{item.desc}</p>
+                <p className="mt-0.5 text-xs text-slate-600">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -279,10 +288,10 @@ function CallForPapers({ onNavigate }) {
           {/* Jenis Artikel Cards */}
           <div className="mt-16">
             <div className="max-w-2xl">
-              <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+              <span className="inline-block rounded-full border border-kreadika-200 bg-kreadika-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700">
                 Kategori Artikel
               </span>
-              <h3 className="mt-3 text-2xl font-bold text-kreadika-navy">
+              <h3 className="mt-3 text-2xl font-bold text-kreadika-800">
                 Jenis Artikel yang Diterima
               </h3>
               <p className="mt-2 text-sm text-slate-600 sm:text-base">
@@ -295,13 +304,13 @@ function CallForPapers({ onNavigate }) {
               {jenisArtikel.map((artikel, idx) => (
                 <div
                   key={idx}
-                  className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5"
+                  className="group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5"
                 >
                   <div>
-                    <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal transition-colors duration-200 group-hover:bg-kreadika-royal group-hover:text-white">
+                    <span className="inline-block rounded-full border border-kreadika-200/70 bg-kreadika-50 px-3 py-1 text-xs font-semibold text-kreadika-700 transition-colors duration-200 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                       {artikel.badge}
                     </span>
-                    <h4 className="mt-4 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                    <h4 className="mt-4 text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                       {artikel.title}
                     </h4>
                     <p className="mt-2.5 text-sm leading-relaxed text-slate-600">
@@ -320,19 +329,19 @@ function CallForPapers({ onNavigate }) {
       ==================== */}
       <section
         id="topik"
-        className="border-y border-blue-100 bg-kreadika-ice py-16 sm:py-24"
+        className="border-y border-kreadika-200/70 bg-kreadika-50/60 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+            <span className="inline-block rounded-full border border-kreadika-200 bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700 shadow-2xs">
               Subtema Kajian
             </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-800 sm:text-3xl">
               Ruang Lingkup Topik
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-              Makalah yang dikirimkan dapat mencakup salah satu dari tujuh
-              ruang lingkup fokus kajian seminar:
+              Makalah yang dikirimkan dapat mencakup salah satu dari tujuh ruang
+              lingkup fokus kajian seminar:
             </p>
           </div>
 
@@ -340,20 +349,20 @@ function CallForPapers({ onNavigate }) {
             {ruangLingkup.map((item, index) => (
               <div
                 key={item.no}
-                className={`group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 ${
+                className={`group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5 ${
                   index === 6 ? "sm:col-span-2 lg:col-span-3" : ""
                 }`}
               >
                 <div>
                   <div className="flex items-center justify-between">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-ice text-sm font-bold text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-kreadika-200/70 bg-kreadika-50 text-sm font-bold text-kreadika-700 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                       0{item.no}
                     </span>
-                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition-colors duration-200 group-hover:text-kreadika-royal">
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-600 transition-colors duration-200 group-hover:text-kreadika-600">
                       Topik 0{item.no}
                     </span>
                   </div>
-                  <h3 className="mt-4 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                  <h3 className="mt-4 text-base font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -374,10 +383,10 @@ function CallForPapers({ onNavigate }) {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
           <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+            <span className="inline-block rounded-full border border-kreadika-200 bg-kreadika-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700">
               Agenda &amp; Lini Masa
             </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-800 sm:text-3xl">
               Tanggal Penting
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
@@ -393,8 +402,8 @@ function CallForPapers({ onNavigate }) {
                 key={index}
                 className={`group relative flex flex-col justify-between rounded-2xl p-5.5 transition-all duration-300 hover:-translate-y-1 ${
                   item.highlight
-                    ? "bg-kreadika-navy text-white ring-2 ring-kreadika-royal shadow-md hover:shadow-xl hover:shadow-kreadika-navy/25"
-                    : "border border-blue-100 bg-white shadow-xs hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5"
+                    ? "bg-kreadika-800 text-white ring-2 ring-kreadika-600/30 shadow-md hover:shadow-xl hover:shadow-kreadika-800/15"
+                    : "border border-kreadika-200/80 bg-white shadow-2xs hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5"
                 }`}
               >
                 <div>
@@ -402,14 +411,14 @@ function CallForPapers({ onNavigate }) {
                     <span
                       className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold transition-all duration-300 ${
                         item.highlight
-                          ? "bg-white/15 text-sky-200 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white"
-                          : "bg-kreadika-ice text-kreadika-royal group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white"
+                          ? "bg-white/15 text-kreadika-200 group-hover:scale-105 group-hover:bg-kreadika-400 group-hover:text-kreadika-950"
+                          : "border border-kreadika-200/60 bg-kreadika-50 text-kreadika-700 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white"
                       }`}
                     >
                       {item.step}
                     </span>
                     {item.highlight && (
-                      <span className="rounded-full bg-kreadika-royal px-2.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase text-white">
+                      <span className="rounded-full bg-kreadika-400 px-2.5 py-0.5 text-[10px] font-bold tracking-wide uppercase text-kreadika-950 shadow-2xs">
                         {item.tag}
                       </span>
                     )}
@@ -419,7 +428,7 @@ function CallForPapers({ onNavigate }) {
                     className={`mt-4 text-sm font-bold leading-snug transition-colors duration-200 ${
                       item.highlight
                         ? "text-white"
-                        : "text-kreadika-navy group-hover:text-kreadika-royal"
+                        : "text-kreadika-800 group-hover:text-kreadika-600"
                     }`}
                   >
                     {item.label}
@@ -428,19 +437,19 @@ function CallForPapers({ onNavigate }) {
 
                 <div
                   className={`mt-6 border-t pt-3.5 ${
-                    item.highlight ? "border-white/15" : "border-blue-50"
+                    item.highlight ? "border-white/15" : "border-kreadika-100"
                   }`}
                 >
                   <p
                     className={`text-xs font-semibold uppercase tracking-wider ${
-                      item.highlight ? "text-sky-300" : "text-slate-600"
+                      item.highlight ? "text-kreadika-200" : "text-slate-600"
                     }`}
                   >
                     Jadwal
                   </p>
                   <p
                     className={`mt-0.5 text-base font-bold ${
-                      item.highlight ? "text-white" : "text-kreadika-royal"
+                      item.highlight ? "text-white" : "text-kreadika-700"
                     }`}
                   >
                     {item.date}
@@ -451,13 +460,13 @@ function CallForPapers({ onNavigate }) {
           </div>
 
           {/* Timeline Bottom Notification */}
-          <div className="mt-6 flex flex-col gap-2 rounded-xl border border-blue-100 bg-kreadika-ice/60 px-5 py-3.5 text-xs text-slate-600 transition-shadow duration-300 hover:shadow-sm sm:flex-row sm:items-center sm:justify-between">
+          <div className="mt-6 flex flex-col gap-2 rounded-xl border border-kreadika-200/80 bg-kreadika-50/60 px-5 py-3.5 text-xs text-slate-600 shadow-2xs transition-shadow duration-300 hover:shadow-xs sm:flex-row sm:items-center sm:justify-between">
             <span className="flex items-center gap-2">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
               Seluruh batas waktu dan kegiatan menggunakan zona Waktu Indonesia
               Barat (WIB).
             </span>
-            <span className="font-semibold text-kreadika-navy">
+            <span className="font-semibold text-kreadika-800">
               Seminar Nasional KREADIKA 2027
             </span>
           </div>
@@ -469,14 +478,14 @@ function CallForPapers({ onNavigate }) {
       ==================== */}
       <section
         id="luaran"
-        className="border-y border-blue-100 bg-kreadika-ice py-16 sm:py-24"
+        className="border-y border-kreadika-200/70 bg-kreadika-50/60 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+            <span className="inline-block rounded-full border border-kreadika-200 bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700 shadow-2xs">
               Luaran Seminar
             </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-800 sm:text-3xl">
               Publikasi dan Luaran Artikel
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
@@ -487,9 +496,9 @@ function CallForPapers({ onNavigate }) {
 
           <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-3">
             {/* Prosiding */}
-            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+            <div className="group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-kreadika-200/70 bg-kreadika-50 text-kreadika-600 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -504,18 +513,18 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   Prosiding KREADIKA 2027
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA 2027 oleh
-                  Scientific Advantage Publishing (ber-ISSN dan ber-DOI).
+                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA 2027
+                  oleh Scientific Advantage Publishing (ber-ISSN dan ber-DOI).
                 </p>
               </div>
               <a
                 href="/prosiding"
                 onClick={(e) => handleClick(e, "/prosiding")}
-                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-kreadika-100 pt-4 text-sm font-semibold text-kreadika-600 transition-colors duration-200 hover:text-kreadika-800"
               >
                 Informasi prosiding{" "}
                 <span
@@ -528,9 +537,9 @@ function CallForPapers({ onNavigate }) {
             </div>
 
             {/* Rekomendasi Jurnal */}
-            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+            <div className="group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-kreadika-200/70 bg-kreadika-50 text-kreadika-600 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -545,12 +554,12 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   Rekomendasi Jurnal Mitra
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
                   Artikel terbaik direkomendasikan ke jurnal mitra:{" "}
-                  <span className="font-semibold text-kreadika-navy">
+                  <span className="font-semibold text-kreadika-800">
                     [nama jurnal]
                   </span>{" "}
                   untuk proses penerbitan artikel berkala ilmiah.
@@ -559,7 +568,7 @@ function CallForPapers({ onNavigate }) {
               <a
                 href="/mitra"
                 onClick={(e) => handleClick(e, "/mitra")}
-                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-kreadika-100 pt-4 text-sm font-semibold text-kreadika-600 transition-colors duration-200 hover:text-kreadika-800"
               >
                 Lihat daftar mitra{" "}
                 <span
@@ -572,9 +581,9 @@ function CallForPapers({ onNavigate }) {
             </div>
 
             {/* Sertifikat */}
-            <div className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5">
+            <div className="group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5">
               <div>
-                <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal group-hover:text-white">
+                <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-kreadika-200/70 bg-kreadika-50 text-kreadika-600 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -589,7 +598,7 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </div>
-                <h3 className="mt-5 text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <h3 className="mt-5 text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   Sertifikat Resmi
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -600,7 +609,7 @@ function CallForPapers({ onNavigate }) {
               <a
                 href="/pendaftaran"
                 onClick={(e) => handleClick(e, "/pendaftaran")}
-                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-blue-50 pt-4 text-sm font-semibold text-kreadika-royal transition-colors duration-200 hover:text-kreadika-royal-dark"
+                className="group/link mt-6 inline-flex items-center gap-1.5 border-t border-kreadika-100 pt-4 text-sm font-semibold text-kreadika-600 transition-colors duration-200 hover:text-kreadika-800"
               >
                 Informasi kepesertaan{" "}
                 <span
@@ -621,92 +630,92 @@ function CallForPapers({ onNavigate }) {
       <section id="ketentuan" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+            <span className="inline-block rounded-full border border-kreadika-200 bg-kreadika-50 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700">
               Pedoman Penulisan
             </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-800 sm:text-3xl">
               Ketentuan Makalah
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
-              Naskah yang diajukan wajib memenuhi standar penulisan naskah ilmiah
-              berikut:
+              Naskah yang diajukan wajib memenuhi standar penulisan naskah
+              ilmiah berikut:
             </p>
           </div>
 
-          {/* Ketentuan Umum Cards */}
-          <div className="mt-10 rounded-2xl border border-blue-100 bg-white p-6 sm:p-8 shadow-xs">
-            <h3 className="text-lg font-bold text-kreadika-navy">
+            {/* Ketentuan Umum Cards */}
+          <div className="mt-10 rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs sm:p-8">
+            <h3 className="text-lg font-bold text-kreadika-800">
               Ketentuan Umum
             </h3>
             <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Bahasa
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   Bahasa Indonesia atau Inggris
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   Ditulis dengan tata bahasa baku dan efektif
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Panjang Naskah
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   Panjang 8–12 halaman, kertas A4
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   Format dokumen standar template KREADIKA
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Tipografi &amp; Spasi
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   Times New Roman 12, spasi 1,15
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   Margin dan format teks proporsional
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Gaya Sitasi
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   APA Edisi ke-7
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   Menggunakan Mendeley atau Zotero
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Daftar Pustaka
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   Minimal 15 rujukan
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   80% terbit dalam 10 tahun terakhir
                 </p>
               </div>
 
-              <div className="rounded-xl border border-blue-50 bg-kreadika-ice/60 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-royal/30 hover:bg-white hover:shadow-sm">
-                <p className="text-xs font-semibold uppercase tracking-wider text-sky-700">
+              <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/50 p-4 transition-all duration-200 hover:-translate-y-0.5 hover:border-kreadika-400 hover:bg-white hover:shadow-2xs">
+                <p className="text-xs font-semibold uppercase tracking-wider text-kreadika-600">
                   Kemiripan &amp; Sistem
                 </p>
-                <p className="mt-1 text-sm font-bold text-kreadika-navy">
+                <p className="mt-1 text-sm font-bold text-kreadika-800">
                   Similarity Maksimal 20%
                 </p>
-                <p className="mt-0.5 text-xs text-slate-500">
+                <p className="mt-0.5 text-xs text-slate-600">
                   Dikirim melalui sistem OJS prosiding KREADIKA
                 </p>
               </div>
@@ -716,9 +725,9 @@ function CallForPapers({ onNavigate }) {
           {/* Sistematika Penulisan (2 Kolom) */}
           <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
             {/* Format 1: Penelitian & Konseptual */}
-            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:p-8">
+            <div className="group flex flex-col rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white transition-transform duration-300 group-hover:scale-110">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-600 text-white shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:bg-kreadika-700">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -733,61 +742,59 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </span>
-                <h3 className="text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <h3 className="text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   Artikel Penelitian dan Konseptual
                 </h3>
               </div>
-              <p className="mt-2 text-xs text-slate-500">
+              <p className="mt-2 text-xs text-slate-600">
                 Sistematika struktur penulisan artikel hasil penelitian dan
                 kajian konseptual:
               </p>
 
-              <ol className="mt-5 space-y-2.5 text-sm text-slate-700">
+              <ol className="mt-5 space-y-2.5 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">1.</span>
+                  <span className="font-semibold text-kreadika-600">1.</span>
                   <span>Judul (maksimal 15 kata)</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">2.</span>
+                  <span className="font-semibold text-kreadika-600">2.</span>
                   <span>Nama penulis, afiliasi, dan email</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">3.</span>
-                  <span>
-                    Abstrak (150–250 kata) dan kata kunci (3–5 kata)
-                  </span>
+                  <span className="font-semibold text-kreadika-600">3.</span>
+                  <span>Abstrak (150–250 kata) dan kata kunci (3–5 kata)</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">4.</span>
+                  <span className="font-semibold text-kreadika-600">4.</span>
                   <span>Pendahuluan</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">5.</span>
+                  <span className="font-semibold text-kreadika-600">5.</span>
                   <span>Metode</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">6.</span>
+                  <span className="font-semibold text-kreadika-600">6.</span>
                   <span>Hasil dan Pembahasan</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">7.</span>
+                  <span className="font-semibold text-kreadika-600">7.</span>
                   <span>Simpulan dan Saran</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">8.</span>
+                  <span className="font-semibold text-kreadika-600">8.</span>
                   <span>Ucapan Terima Kasih (opsional)</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">9.</span>
+                  <span className="font-semibold text-kreadika-600">9.</span>
                   <span>Daftar Pustaka</span>
                 </li>
               </ol>
             </div>
 
             {/* Format 2: Praktik Baik */}
-            <div className="group flex flex-col rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-md hover:shadow-blue-950/5 sm:p-8">
+            <div className="group flex flex-col rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5 sm:p-8">
               <div className="flex items-center gap-3">
-                <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-kreadika-royal text-white transition-transform duration-300 group-hover:scale-110">
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-kreadika-600 text-white shadow-2xs transition-transform duration-300 group-hover:scale-105 group-hover:bg-kreadika-700">
                   <svg
                     className="h-5 w-5"
                     fill="none"
@@ -802,44 +809,44 @@ function CallForPapers({ onNavigate }) {
                     />
                   </svg>
                 </span>
-                <h3 className="text-lg font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                <h3 className="text-lg font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                   Artikel Praktik Baik (Best Practice)
                 </h3>
               </div>
-              <p className="mt-2 text-xs text-slate-500">
+              <p className="mt-2 text-xs text-slate-600">
                 Sistematika struktur penulisan artikel praktik baik dari satuan
                 pendidikan:
               </p>
 
-              <ol className="mt-5 space-y-2.5 text-sm text-slate-700">
+              <ol className="mt-5 space-y-2.5 text-sm text-slate-600">
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">1.</span>
+                  <span className="font-semibold text-kreadika-600">1.</span>
                   <span>Latar Belakang Masalah</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">2.</span>
+                  <span className="font-semibold text-kreadika-600">2.</span>
                   <span>Deskripsi Praktik Baik</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">3.</span>
+                  <span className="font-semibold text-kreadika-600">3.</span>
                   <span>Hasil dan Dampak</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">4.</span>
+                  <span className="font-semibold text-kreadika-600">4.</span>
                   <span>Refleksi dan Rekomendasi</span>
                 </li>
                 <li className="flex items-start gap-2.5">
-                  <span className="font-semibold text-kreadika-royal">5.</span>
+                  <span className="font-semibold text-kreadika-600">5.</span>
                   <span>Daftar Pustaka</span>
                 </li>
               </ol>
 
               <div className="mt-auto pt-6">
-                <div className="rounded-xl border border-blue-100 bg-kreadika-ice p-4 text-xs text-kreadika-navy">
+                <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/60 p-4 text-xs text-kreadika-800">
                   <p className="leading-relaxed">
                     Format naskah praktik baik memfasilitasi pendidik dan
-                    praktisi untuk mendokumentasikan terobosan nyata pembelajaran
-                    secara ilmiah dan aplikatif.
+                    praktisi untuk mendokumentasikan terobosan nyata
+                    pembelajaran secara ilmiah dan aplikatif.
                   </p>
                 </div>
               </div>
@@ -853,14 +860,14 @@ function CallForPapers({ onNavigate }) {
       ==================== */}
       <section
         id="cara-mengirim"
-        className="border-y border-blue-100 bg-kreadika-ice py-16 sm:py-24"
+        className="border-y border-kreadika-200/70 bg-kreadika-50/60 py-16 sm:py-24"
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+            <span className="inline-block rounded-full border border-kreadika-200 bg-white px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-700 shadow-2xs">
               Alur Pengiriman
             </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-800 sm:text-3xl">
               Cara Mengirim
             </h2>
             <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
@@ -872,13 +879,13 @@ function CallForPapers({ onNavigate }) {
             {submissionSteps.map((item) => (
               <div
                 key={item.step}
-                className="group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 sm:p-7"
+                className="group flex flex-col justify-between rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:-translate-y-1.5 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5 sm:p-7"
               >
                 <div>
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-royal text-sm font-bold text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-kreadika-royal-dark">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-600 text-sm font-bold text-white shadow-2xs transition-all duration-300 group-hover:scale-105 group-hover:bg-kreadika-700">
                     {item.step}
                   </span>
-                  <h3 className="mt-5 text-base font-bold text-kreadika-navy transition-colors duration-200 group-hover:text-kreadika-royal">
+                  <h3 className="mt-5 text-base font-bold text-kreadika-800 transition-colors duration-200 group-hover:text-kreadika-600">
                     {item.title}
                   </h3>
                   <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -890,9 +897,9 @@ function CallForPapers({ onNavigate }) {
           </div>
 
           {/* Independensi Review Callout */}
-          <div className="mt-8 rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:border-kreadika-royal/30 hover:shadow-md sm:p-8">
+          <div className="mt-8 rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs transition-all duration-300 hover:border-kreadika-400 hover:shadow-md hover:shadow-kreadika-800/5 sm:p-8">
             <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-kreadika-ice text-kreadika-royal">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-kreadika-200/70 bg-kreadika-50 text-kreadika-600">
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -908,7 +915,7 @@ function CallForPapers({ onNavigate }) {
                 </svg>
               </div>
               <div>
-                <h4 className="text-base font-bold text-kreadika-navy">
+                <h4 className="text-base font-bold text-kreadika-800">
                   Independensi dan Integritas Review Ilmiah
                 </h4>
                 <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
@@ -929,16 +936,20 @@ function CallForPapers({ onNavigate }) {
       ==================== */}
       <section id="kirim" className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl bg-kreadika-navy px-6 py-10 shadow-sm transition-shadow duration-300 hover:shadow-xl hover:shadow-kreadika-navy/15 sm:px-10 sm:py-12">
-            <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+          <div className="relative overflow-hidden rounded-3xl border border-kreadika-700 bg-kreadika-800 px-6 py-10 text-white shadow-lg shadow-kreadika-800/10 sm:px-10 sm:py-12">
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-20 -bottom-20 h-64 w-64 rounded-full bg-kreadika-600/30 blur-3xl"
+            />
+            <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
               <div className="max-w-xl">
-                <span className="inline-block rounded-md bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-sky-200">
+                <span className="inline-block rounded-full border border-white/15 bg-white/10 px-3.5 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-200">
                   Pengiriman Naskah
                 </span>
                 <h2 className="mt-3 text-2xl font-bold tracking-tight text-white sm:text-3xl">
                   Siap mengirim abstrak?
                 </h2>
-                <p className="mt-2 text-sm leading-relaxed text-blue-100 sm:text-base">
+                <p className="mt-2 text-sm leading-relaxed text-kreadika-100/90 sm:text-base">
                   Sistem pengiriman dibuka bersamaan dengan pengumuman call for
                   papers.
                 </p>
@@ -950,7 +961,7 @@ function CallForPapers({ onNavigate }) {
                   onClick={(e) =>
                     handleClick(e, "https://kreadika.id/call-for-papers#kirim")
                   }
-                  className="group inline-flex items-center justify-center rounded-lg bg-kreadika-royal px-5 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-royal-dark hover:shadow-lg hover:shadow-kreadika-royal/30 active:translate-y-0 active:scale-[0.98]"
+                  className="group inline-flex items-center justify-center rounded-xl bg-white px-5 py-3.5 text-sm font-semibold text-kreadika-800 shadow-xs transition-all duration-300 hover:-translate-y-0.5 hover:bg-kreadika-50 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
                 >
                   Kirim melalui OJS
                   <span
@@ -963,7 +974,7 @@ function CallForPapers({ onNavigate }) {
                 <a
                   href="https://kreadika.id/kontak"
                   onClick={(e) => handleClick(e, "/kontak")}
-                  className="inline-flex items-center justify-center rounded-lg border border-white/20 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/20 hover:shadow-lg hover:shadow-black/15 active:translate-y-0 active:scale-[0.98]"
+                  className="inline-flex items-center justify-center rounded-xl border border-white/25 bg-white/10 px-5 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:border-white/40 hover:bg-white/15 hover:shadow-md active:translate-y-0 active:scale-[0.98]"
                 >
                   Unduh template makalah
                 </a>

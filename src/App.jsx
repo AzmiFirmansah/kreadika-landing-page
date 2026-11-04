@@ -1,15 +1,17 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Tentang from "./pages/Tentang";
-import Panitia from "./pages/Panitia";
-import Mitra from "./pages/Mitra";
-import CallForPapers from "./pages/CallForPapers";
-import Pendaftaran from "./pages/Pendaftaran";
-import PendaftaranOnline from "./pages/PendaftaranOnline";
-import Prosiding from "./pages/Prosiding";
-import Kontak from "./pages/Kontak";
+
+// Lazy load non-homepage routes for optimal initial mobile payload & LCP
+const Tentang = lazy(() => import("./pages/Tentang"));
+const Panitia = lazy(() => import("./pages/Panitia"));
+const Mitra = lazy(() => import("./pages/Mitra"));
+const CallForPapers = lazy(() => import("./pages/CallForPapers"));
+const Pendaftaran = lazy(() => import("./pages/Pendaftaran"));
+const PendaftaranOnline = lazy(() => import("./pages/PendaftaranOnline"));
+const Prosiding = lazy(() => import("./pages/Prosiding"));
+const Kontak = lazy(() => import("./pages/Kontak"));
 
 function App() {
   const [currentPath, setCurrentPath] = useState(
@@ -197,7 +199,9 @@ function App() {
           MAIN CONTENT (ROUTER)
       ==================== */}
       <div key={activeRouteKey} className="animate-page-enter">
-        {renderMainContent()}
+        <Suspense fallback={<div className="min-h-[50vh] bg-white" />}>
+          {renderMainContent()}
+        </Suspense>
       </div>
 
       {/* ==================== 
