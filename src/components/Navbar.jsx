@@ -1,6 +1,6 @@
 import { useState } from "react";
-import logoKreadika from "../assets/icons/logo-kreadika-horizontal.png";
-import chevronDown from "../assets/icons/chevron-down-solid-full.svg";
+import logoKreadika from "../assets/logo-kreadika-horizontal.webp";
+import chevronDown from "../assets/chevron-down-solid-full.svg";
 
 function Navbar({ currentPath = "/", onNavigate }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -20,7 +20,7 @@ function Navbar({ currentPath = "/", onNavigate }) {
         <a
           href="/"
           onClick={(e) => handleClick(e, "/")}
-          className="flex items-center gap-3 transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98]"
+          className="flex items-center gap-3"
         >
           <img
             src={logoKreadika}

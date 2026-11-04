@@ -335,7 +335,7 @@ function Home({ onNavigate }) {
               <div
                 key={item.no}
                 className={`group flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-royal/40 hover:shadow-lg hover:shadow-blue-950/5 ${
-                  index === 6 ? "sm:col-span-2 lg:col-span-1" : ""
+                  index === 6 ? "sm:col-span-2 lg:col-span-3" : ""
                 }`}
               >
                 <div>

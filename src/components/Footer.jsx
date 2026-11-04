@@ -1,4 +1,4 @@
-import logoKreadika from "../assets/icons/logo-kreadika-horizontal.png";
+import logoKreadika from "../assets/logo-kreadika-horizontal.webp";
 
 function Footer({ onNavigate }) {
   const handleClick = (e, path) => {
@@ -14,7 +14,7 @@ function Footer({ onNavigate }) {
         <div className="grid grid-cols-1 gap-10 md:grid-cols-12">
           {/* Brand & Organizer Info */}
           <div className="md:col-span-5">
-            <div className="inline-block rounded-xl bg-white px-4 py-2.5 transition-all duration-300 hover:scale-[1.03] hover:shadow-lg hover:shadow-black/20">
+            <div className="inline-block rounded-xl bg-white px-4 py-2.5">
               <img
                 src={logoKreadika}
                 alt="Logo KREADIKA"
@@ -52,9 +52,7 @@ function Footer({ onNavigate }) {
               </li>
               <li>
                 <span className="block text-xs text-blue-300">WhatsApp</span>
-                <span className="font-medium text-white">
-                  [nomor WhatsApp]
-                </span>
+                <span className="font-medium text-white">[nomor WhatsApp]</span>
               </li>
             </ul>
           </div>
@@ -136,4 +134,3 @@ function Footer({ onNavigate }) {
 }
 
 export default Footer;
-
