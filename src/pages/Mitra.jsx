@@ -78,10 +78,12 @@ function Mitra() {
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+              Mitra Penyelenggara
+            </span>
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Co-host
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
           </div>
 
           <div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -135,11 +137,13 @@ function Mitra() {
       <section className="border-y border-blue-100 bg-kreadika-ice py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h2 className="text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+              Publikasi Ilmiah
+            </span>
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Jurnal Mitra
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
               Artikel terbaik KREADIKA direkomendasikan untuk diterbitkan di
               jurnal mitra, melalui proses review jurnal tersebut.
             </p>
@@ -196,10 +200,12 @@ function Mitra() {
       <section className="bg-white py-16 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h2 className="text-2xl font-bold text-kreadika-navy sm:text-3xl">
+            <span className="inline-block rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+              Skema Kemitraan
+            </span>
+            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Bentuk Kerja Sama
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
           </div>
 
           {/* Cards for Schemes */}

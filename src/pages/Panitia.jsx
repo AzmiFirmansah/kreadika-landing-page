@@ -1,11 +1,4 @@
-function Panitia({ onNavigate }) {
-  const handleClick = (e, path) => {
-    if (onNavigate && path.startsWith("/")) {
-      e.preventDefault();
-      onNavigate(path);
-    }
-  };
-
+function Panitia() {
   return (
     <main id="panitia-kreadika">
       {/* ==================== 
@@ -48,7 +41,6 @@ function Panitia({ onNavigate }) {
               <h2 className="mt-4 text-2xl font-bold leading-snug text-kreadika-navy sm:text-3xl">
                 Kolaborasi Akademisi, Praktisi, dan Penyelenggara
               </h2>
-              <div className="mt-5 h-1 w-16 rounded-full bg-kreadika-royal"></div>
             </div>
 
             {/* Content Body */}
@@ -60,7 +52,8 @@ function Panitia({ onNavigate }) {
                 </strong>{" "}
                 didukung oleh susunan kepanitiaan yang solid, komite penelaah
                 ilmiah independen, serta narasumber kunci yang kredibel di
-                bidang kebijakan, sains pendidikan, dan implementasi praktik baik.
+                bidang kebijakan, sains pendidikan, dan implementasi praktik
+                baik.
               </p>
               <p>
                 Komite Ilmiah bertugas menyeleksi dan menelaah naskah melalui
@@ -92,8 +85,7 @@ function Panitia({ onNavigate }) {
             <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Pembicara Kunci
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
               Tiga perspektif fundamental dalam menjawab tantangan perubahan
               lanskap pendidikan nasional.
             </p>
@@ -237,11 +229,10 @@ function Panitia({ onNavigate }) {
             <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Komite Ilmiah
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
               Lima sampai sepuluh dosen atau peneliti dari beberapa perguruan
-              tinggi yang berbeda, ditambah praktisi seperti pengawas atau kepala
-              sekolah berprestasi.
+              tinggi yang berbeda, ditambah praktisi seperti pengawas atau
+              kepala sekolah berprestasi.
             </p>
           </div>
 
@@ -402,8 +393,7 @@ function Panitia({ onNavigate }) {
             <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
               Susunan Panitia
             </h2>
-            <div className="mt-4 h-1 w-16 rounded-full bg-kreadika-royal"></div>
-            <p className="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+            <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
               Panitia pelaksana seminar nasional KREADIKA 2027.
             </p>
           </div>
@@ -660,4 +650,3 @@ function Panitia({ onNavigate }) {
 }
 
 export default Panitia;
-

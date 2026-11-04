@@ -6,6 +6,78 @@ function Home({ onNavigate }) {
     }
   };
 
+  const ruangLingkup = [
+    {
+      no: 1,
+      title: "Inovasi Pembelajaran",
+      desc: "Inovasi pembelajaran, kurikulum, dan pembelajaran mendalam",
+    },
+    {
+      no: 2,
+      title: "Teknologi Pendidikan",
+      desc: "Teknologi pendidikan, transformasi digital, dan kecerdasan artifisial",
+    },
+    {
+      no: 3,
+      title: "Asesmen Pembelajaran",
+      desc: "Asesmen dan evaluasi pembelajaran",
+    },
+    {
+      no: 4,
+      title: "Kepemimpinan Sekolah",
+      desc: "Kepemimpinan, manajemen, dan supervisi pendidikan",
+    },
+    {
+      no: 5,
+      title: "Profesi Pendidik",
+      desc: "Pengembangan profesional dan kesejahteraan pendidik",
+    },
+    {
+      no: 6,
+      title: "Pendidikan Inklusif",
+      desc: "Pendidikan inklusif, karakter, dan pemerataan mutu",
+    },
+    {
+      no: 7,
+      title: "Kebijakan Pendidikan",
+      desc: "Kebijakan dan tata kelola pendidikan",
+    },
+  ];
+
+  const timelineDates = [
+    {
+      step: "01",
+      label: "Batas pengiriman abstrak",
+      date: "[tanggal]",
+      highlight: false,
+    },
+    {
+      step: "02",
+      label: "Pengumuman abstrak diterima",
+      date: "[tanggal]",
+      highlight: false,
+    },
+    {
+      step: "03",
+      label: "Batas pengiriman artikel lengkap",
+      date: "[tanggal]",
+      highlight: false,
+    },
+    {
+      step: "04",
+      label: "Pelaksanaan seminar",
+      date: "[tanggal]",
+      highlight: true,
+      tag: "Hari H",
+    },
+    {
+      step: "05",
+      label: "Terbit prosiding",
+      date: "[tanggal]",
+      highlight: false,
+    },
+  ];
+
   return (
     <main id="beranda">
       {/* ==================== 
@@ -168,7 +240,6 @@ function Home({ onNavigate }) {
                 Teknologi untuk memperkuat peran manusia dalam pendidikan,
                 bukan menggantikannya
               </h2>
-              <div className="mt-5 h-1 w-16 rounded-full bg-kreadika-royal"></div>
             </div>
 
             {/* About Description */}
@@ -219,170 +290,154 @@ function Home({ onNavigate }) {
       >
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           {/* Section Header */}
-          <div className="max-w-2xl">
-            <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
-              Call for Papers
-            </span>
-            <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
-              Ruang Lingkup Topik
-            </h2>
-            <p className="mt-2 text-sm text-slate-600 sm:text-base">
-              Makalah yang dikirimkan dapat mencakup salah satu dari tujuh
-              subtema kajian berikut.
-            </p>
+          <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+                Call for Papers
+              </span>
+              <h2 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+                Ruang Lingkup Topik
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                Makalah yang dikirimkan dapat mencakup salah satu dari tujuh
+                subtema kajian berikut:
+              </p>
+            </div>
+            <a
+              href="/call-for-papers"
+              onClick={(e) => handleClick(e, "/call-for-papers")}
+              className="inline-flex items-center gap-1.5 self-start text-sm font-semibold text-kreadika-royal hover:underline md:self-auto"
+            >
+              Panduan lengkap naskah <span aria-hidden="true">→</span>
+            </a>
           </div>
 
-          <div className="mt-10 grid grid-cols-1 items-stretch gap-6 lg:grid-cols-12">
-            {/* Conference Subthemes & Topics Scope */}
-            <ol className="grid auto-rows-fr grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  1
-                </span>
+          {/* Conference Subthemes & Topics Scope */}
+          <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {ruangLingkup.map((item, index) => (
+              <div
+                key={item.no}
+                className={`flex flex-col justify-between rounded-2xl border border-blue-100 bg-white p-6 shadow-xs transition hover:shadow-md ${
+                  index === 6 ? "sm:col-span-2 lg:col-span-1" : ""
+                }`}
+              >
                 <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Inovasi pembelajaran
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-kreadika-ice text-xs font-bold text-kreadika-royal">
+                      0{item.no}
+                    </span>
+                    <span className="text-[11px] font-semibold uppercase tracking-wider text-slate-400">
+                      Subtema 0{item.no}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 text-base font-bold text-kreadika-navy">
+                    {item.title}
                   </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Inovasi pembelajaran, kurikulum, dan pembelajaran mendalam
+                  <p className="mt-1.5 text-xs leading-relaxed text-slate-600 sm:text-sm">
+                    {item.desc}
                   </p>
                 </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  2
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Teknologi pendidikan
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Teknologi pendidikan, transformasi digital, dan kecerdasan
-                    artifisial
-                  </p>
-                </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  3
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Asesmen
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Asesmen dan evaluasi pembelajaran
-                  </p>
-                </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  4
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Kepemimpinan sekolah
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Kepemimpinan, manajemen, dan supervisi pendidikan
-                  </p>
-                </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  5
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Profesi pendidik
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Pengembangan profesional dan kesejahteraan pendidik
-                  </p>
-                </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  6
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Pendidikan inklusif
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Pendidikan inklusif, karakter, dan pemerataan mutu
-                  </p>
-                </div>
-              </li>
-              <li className="flex h-full items-start gap-4 rounded-2xl border border-blue-100 bg-white p-5 sm:col-span-2">
-                <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-kreadika-royal text-sm font-bold text-white">
-                  7
-                </span>
-                <div>
-                  <h3 className="text-sm font-bold text-kreadika-navy">
-                    Kebijakan pendidikan
-                  </h3>
-                  <p className="mt-1 text-xs leading-relaxed text-slate-600">
-                    Kebijakan dan tata kelola pendidikan
-                  </p>
-                </div>
-              </li>
-            </ol>
-
-            {/* Key Dates & Timeline Card */}
-            <div id="tanggal-penting" className="lg:col-span-5">
-              <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-blue-100 bg-white">
-                <div className="bg-kreadika-navy px-6 py-5">
-                  <p className="text-xs font-semibold uppercase tracking-wider text-sky-300">
-                    Agenda &amp; Lini Masa
-                  </p>
-                  <h3 className="mt-1 text-lg font-bold text-white">
-                    Tanggal Penting KREADIKA 2027
-                  </h3>
-                </div>
-                <ul className="flex flex-1 flex-col justify-around divide-y divide-blue-50 px-6 py-2">
-                  <li className="flex items-center justify-between gap-4 py-3.5">
-                    <span className="text-sm font-medium text-slate-700">
-                      Batas pengiriman abstrak
-                    </span>
-                    <span className="shrink-0 rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal">
-                      [tanggal]
-                    </span>
-                  </li>
-                  <li className="flex items-center justify-between gap-4 py-3.5">
-                    <span className="text-sm font-medium text-slate-700">
-                      Pengumuman abstrak diterima
-                    </span>
-                    <span className="shrink-0 rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal">
-                      [tanggal]
-                    </span>
-                  </li>
-                  <li className="flex items-center justify-between gap-4 py-3.5">
-                    <span className="text-sm font-medium text-slate-700">
-                      Batas pengiriman artikel lengkap
-                    </span>
-                    <span className="shrink-0 rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal">
-                      [tanggal]
-                    </span>
-                  </li>
-                  <li className="flex items-center justify-between gap-4 py-3.5">
-                    <span className="text-sm font-semibold text-kreadika-navy">
-                      Pelaksanaan seminar
-                    </span>
-                    <span className="shrink-0 rounded-md bg-kreadika-royal px-3 py-1 text-xs font-semibold text-white">
-                      [tanggal]
-                    </span>
-                  </li>
-                  <li className="flex items-center justify-between gap-4 py-3.5">
-                    <span className="text-sm font-medium text-slate-700">
-                      Terbit prosiding
-                    </span>
-                    <span className="shrink-0 rounded-md bg-kreadika-ice px-3 py-1 text-xs font-semibold text-kreadika-royal">
-                      [tanggal]
-                    </span>
-                  </li>
-                </ul>
               </div>
+            ))}
+          </div>
+
+          {/* ==================== 
+              TANGGAL PENTING KREADIKA 2027
+              Desain identik dengan halaman Call for Papers
+          ==================== */}
+          <div
+            id="tanggal-penting"
+            className="mt-16 border-t border-blue-100 pt-16"
+          >
+            <div className="max-w-2xl">
+              <span className="inline-block rounded-md bg-white px-3 py-1 text-xs font-semibold uppercase tracking-wider text-kreadika-royal">
+                Agenda &amp; Lini Masa
+              </span>
+              <h3 className="mt-3 text-2xl font-bold text-kreadika-navy sm:text-3xl">
+                Tanggal Penting KREADIKA 2027
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600 sm:text-base">
+                Perhatikan batas waktu pengiriman naskah dan kegiatan seminar
+                KREADIKA 2027.
+              </p>
+            </div>
+
+            {/* 5-Milestone Timeline Cards */}
+            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+              {timelineDates.map((item, index) => (
+                <div
+                  key={index}
+                  className={`relative flex flex-col justify-between rounded-2xl p-5.5 transition ${
+                    item.highlight
+                      ? "bg-kreadika-navy text-white ring-2 ring-kreadika-royal shadow-md"
+                      : "border border-blue-100 bg-white shadow-xs hover:border-kreadika-royal/40"
+                  }`}
+                >
+                  <div>
+                    <div className="flex items-center justify-between">
+                      <span
+                        className={`flex h-7 w-7 items-center justify-center rounded-lg text-xs font-bold ${
+                          item.highlight
+                            ? "bg-white/15 text-sky-200"
+                            : "bg-kreadika-ice text-kreadika-royal"
+                        }`}
+                      >
+                        {item.step}
+                      </span>
+                      {item.highlight && (
+                        <span className="rounded-full bg-kreadika-royal px-2.5 py-0.5 text-[10px] font-semibold tracking-wide uppercase text-white">
+                          {item.tag}
+                        </span>
+                      )}
+                    </div>
+
+                    <h4
+                      className={`mt-4 text-sm font-bold leading-snug ${
+                        item.highlight ? "text-white" : "text-kreadika-navy"
+                      }`}
+                    >
+                      {item.label}
+                    </h4>
+                  </div>
+
+                  <div
+                    className={`mt-6 border-t pt-3.5 ${
+                      item.highlight ? "border-white/15" : "border-blue-50"
+                    }`}
+                  >
+                    <p
+                      className={`text-xs uppercase tracking-wider ${
+                        item.highlight ? "text-sky-300" : "text-slate-400"
+                      }`}
+                    >
+                      Jadwal
+                    </p>
+                    <p
+                      className={`mt-0.5 text-base font-bold ${
+                        item.highlight ? "text-white" : "text-kreadika-royal"
+                      }`}
+                    >
+                      {item.date}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Timeline Bottom Notification */}
+            <div className="mt-6 flex flex-col gap-2 rounded-xl border border-blue-100 bg-white px-5 py-3.5 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
+              <span className="flex items-center gap-2">
+                <span className="h-2 w-2 rounded-full bg-emerald-500"></span>
+                Seluruh batas waktu dan kegiatan menggunakan zona Waktu
+                Indonesia Barat (WIB).
+              </span>
+              <a
+                href="/call-for-papers#kirim"
+                onClick={(e) => handleClick(e, "/call-for-papers#kirim")}
+                className="font-semibold text-kreadika-royal hover:underline"
+              >
+                Kirim abstrak sekarang →
+              </a>
             </div>
           </div>
         </div>

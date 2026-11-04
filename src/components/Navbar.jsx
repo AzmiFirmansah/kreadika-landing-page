@@ -131,7 +131,13 @@ function Navbar({ currentPath = "/", onNavigate }) {
                 type="button"
                 data-dropdown-toggle="dropdown-seminar"
                 aria-expanded="false"
-                className="flex items-center gap-1.5 py-2 text-slate-700 cursor-pointer"
+                className={`flex items-center gap-1.5 py-2 cursor-pointer ${
+                  currentPath.startsWith("/call-for-papers") ||
+                  currentPath.startsWith("/pendaftaran") ||
+                  currentPath.startsWith("/prosiding")
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 <span>Seminar</span>
                 <img
@@ -148,7 +154,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/call-for-papers"
                     onClick={(e) => handleClick(e, "/call-for-papers")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath.startsWith("/call-for-papers")
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Call for Papers
@@ -160,7 +170,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/pendaftaran"
                     onClick={(e) => handleClick(e, "/pendaftaran")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath.startsWith("/pendaftaran")
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Pendaftaran
@@ -172,7 +186,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
                   <a
                     href="/prosiding"
                     onClick={(e) => handleClick(e, "/prosiding")}
-                    className="block rounded-lg px-3.5 py-2.5 text-sm"
+                    className={`block rounded-lg px-3.5 py-2.5 text-sm ${
+                      currentPath.startsWith("/prosiding")
+                        ? "bg-kreadika-ice"
+                        : "hover:bg-slate-50"
+                    }`}
                   >
                     <span className="block font-semibold text-kreadika-navy">
                       Prosiding
@@ -320,21 +338,33 @@ function Navbar({ currentPath = "/", onNavigate }) {
               <a
                 href="/call-for-papers"
                 onClick={(e) => handleClick(e, "/call-for-papers")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath.startsWith("/call-for-papers")
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Call for Papers
               </a>
               <a
                 href="/pendaftaran"
                 onClick={(e) => handleClick(e, "/pendaftaran")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath.startsWith("/pendaftaran")
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Pendaftaran
               </a>
               <a
                 href="/prosiding"
                 onClick={(e) => handleClick(e, "/prosiding")}
-                className="block py-1.5 text-sm text-slate-700"
+                className={`block py-1.5 text-sm ${
+                  currentPath.startsWith("/prosiding")
+                    ? "font-semibold text-kreadika-royal"
+                    : "text-slate-700"
+                }`}
               >
                 Prosiding
               </a>
@@ -344,7 +374,11 @@ function Navbar({ currentPath = "/", onNavigate }) {
           <a
             href="/kontak"
             onClick={(e) => handleClick(e, "/kontak")}
-            className="block rounded-lg px-3 py-2 text-sm font-medium text-slate-700"
+            className={`block rounded-lg px-3 py-2 text-sm font-medium ${
+              currentPath === "/kontak"
+                ? "font-semibold text-kreadika-royal"
+                : "text-slate-700"
+            }`}
           >
             Kontak
           </a>
