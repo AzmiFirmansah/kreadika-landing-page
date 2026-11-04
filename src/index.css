@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  /* KREADIKA Brand Blue Palette (derived from logo) */
+  --color-kreadika-navy: #0e223d;
+  --color-kreadika-navy-light: #16335b;
+  --color-kreadika-royal: #1d63dc;
+  --color-kreadika-royal-dark: #154eb5;
+  --color-kreadika-sky: #3fa4dc;
+  --color-kreadika-ice: #f0f7ff;
+  --color-kreadika-ice-border: #d4e7fb;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    color: #0e223d;
+    background-color: #ffffff;
+  }
+}
