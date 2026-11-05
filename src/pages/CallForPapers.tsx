@@ -204,7 +204,9 @@ function CallForPapers({ onNavigate }: PageProps) {
             <span className="inline-flex items-center gap-2 rounded-full border border-kreadika-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-kreadika-700 shadow-2xs transition-colors duration-300 hover:border-kreadika-300 hover:bg-kreadika-50">
               <span className="h-2 w-2 rounded-full bg-kreadika-600 animate-pulse"></span>
               <span>KREADIKA 2027</span>
-              <span aria-hidden="true" className="text-slate-600">•</span>
+              <span aria-hidden="true" className="text-slate-600">
+                •
+              </span>
               <span className="text-kreadika-600">Call for Papers</span>
             </span>
 
@@ -644,7 +646,7 @@ function CallForPapers({ onNavigate }: PageProps) {
             </p>
           </div>
 
-            {/* Ketentuan Umum Cards */}
+          {/* Ketentuan Umum Cards */}
           <div className="mt-10 rounded-2xl border border-kreadika-200/80 bg-white p-6 shadow-2xs sm:p-8">
             <h3 className="text-lg font-bold text-kreadika-800">
               Ketentuan Umum
@@ -842,8 +844,6 @@ function CallForPapers({ onNavigate }: PageProps) {
                   <span>Daftar Pustaka</span>
                 </li>
               </ol>
-<<<<<<< HEAD:src/pages/CallForPapers.tsx
-=======
 
               <div className="mt-auto pt-6">
                 <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/60 p-4 text-xs text-kreadika-800">
@@ -854,7 +854,6 @@ function CallForPapers({ onNavigate }: PageProps) {
                   </p>
                 </div>
               </div>
->>>>>>> ecbb783abac959e176326c3f5a6995ee7b0e8127:src/pages/CallForPapers.jsx
             </div>
           </div>
         </div>

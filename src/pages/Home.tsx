@@ -132,11 +132,8 @@ function Home({ onNavigate }: PageProps) {
           {/* Event Quick Details: Date & Location */}
           <div className="mx-auto mt-12 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2">
             <div className="group flex items-start gap-4 rounded-2xl border border-kreadika-200/80 bg-white p-5 shadow-xs shadow-kreadika-800/5 transition-all duration-300 hover:-translate-y-1 hover:border-kreadika-400 hover:shadow-md">
-<<<<<<< HEAD:src/pages/Home.tsx
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-kreadika-200/60 bg-kreadika-50 text-kreadika-600 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
-=======
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rrounded-xl border border-kreadika-200/60 bg-kreadika-50 text-kreadika-600 transition-all duration-300 group-hover:scale-105 group-hover:border-kreadika-600 group-hover:bg-kreadika-600 group-hover:text-white">
->>>>>>> ecbb783abac959e176326c3f5a6995ee7b0e8127:src/pages/Home.jsx
+
                 <svg
                   className="h-5 w-5"
                   fill="none"
@@ -732,3 +729,4 @@ function Home({ onNavigate }: PageProps) {
 }
 
 export default Home;
+

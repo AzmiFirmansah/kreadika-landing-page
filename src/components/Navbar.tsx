@@ -30,15 +30,10 @@ function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
           <img
             src="/logo-kreadika-horizontal.webp"
             alt="Logo KREADIKA 2027"
-<<<<<<< HEAD:src/components/Navbar.tsx
             width="454"
             height="132"
             fetchPriority="high"
-=======
-            width="170"
-            height="44"
-            fetchpriority="high"
->>>>>>> ecbb783abac959e176326c3f5a6995ee7b0e8127:src/components/Navbar.jsx
+
             decoding="async"
             className="h-10 w-auto sm:h-11"
           />
@@ -382,3 +377,4 @@ function Navbar({ currentPath = "/", onNavigate }: NavbarProps) {
 }
 
 export default Navbar;
+
