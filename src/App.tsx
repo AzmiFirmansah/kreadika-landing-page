@@ -1,19 +1,21 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Tentang from "./pages/Tentang";
-import Panitia from "./pages/Panitia";
-import Mitra from "./pages/Mitra";
-import CallForPapers from "./pages/CallForPapers";
-import Pendaftaran from "./pages/Pendaftaran";
-import PendaftaranOnline from "./pages/PendaftaranOnline";
-import Prosiding from "./pages/Prosiding";
-import Kontak from "./pages/Kontak";
+
+// Lazy load non-homepage routes for optimal initial mobile payload & LCP
+const Tentang = lazy(() => import("./pages/Tentang"));
+const Panitia = lazy(() => import("./pages/Panitia"));
+const Mitra = lazy(() => import("./pages/Mitra"));
+const CallForPapers = lazy(() => import("./pages/CallForPapers"));
+const Pendaftaran = lazy(() => import("./pages/Pendaftaran"));
+const PendaftaranOnline = lazy(() => import("./pages/PendaftaranOnline"));
+const Prosiding = lazy(() => import("./pages/Prosiding"));
+const Kontak = lazy(() => import("./pages/Kontak"));
 
 function App() {
   const [currentPath, setCurrentPath] = useState(
-    window.location.pathname + window.location.hash
+    window.location.pathname + window.location.hash,
   );
 
   // Sync state on browser back / forward navigation
@@ -27,13 +29,15 @@ function App() {
 
   // Update document title and SEO meta tags dynamically based on active route
   useEffect(() => {
-    let title = "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
+    let title =
+      "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
     let description =
       "KREADIKA 2027 – Seminar Nasional Pendidikan Kreatif dan Adaptif di Era Digital. Menghubungkan pendidik, peneliti, dan praktisi untuk inovasi pendidikan Indonesia.";
     let path = "/";
 
     if (currentPath.startsWith("/tentang")) {
-      title = "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
+      title =
+        "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
       description =
         "Profil, visi, tema, dan latar belakang Seminar Nasional Pendidikan Kreatif dan Adaptif (KREADIKA) 2027.";
       path = "/tentang";
@@ -77,7 +81,9 @@ function App() {
     document.title = title;
 
     // Update Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]');
+    let metaDesc = document.querySelector(
+      'meta[name="description"]',
+    ) as HTMLMetaElement | null;
     if (!metaDesc) {
       metaDesc = document.createElement("meta");
       metaDesc.name = "description";
@@ -86,15 +92,23 @@ function App() {
     metaDesc.content = description;
 
     // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogTitle = document.querySelector(
+      'meta[property="og:title"]',
+    ) as HTMLMetaElement | null;
     if (ogTitle) ogTitle.content = title;
-    const ogDesc = document.querySelector('meta[property="og:description"]');
+    const ogDesc = document.querySelector(
+      'meta[property="og:description"]',
+    ) as HTMLMetaElement | null;
     if (ogDesc) ogDesc.content = description;
-    const ogUrl = document.querySelector('meta[property="og:url"]');
+    const ogUrl = document.querySelector(
+      'meta[property="og:url"]',
+    ) as HTMLMetaElement | null;
     if (ogUrl) ogUrl.content = `https://kreadika.id${path === "/" ? "" : path}`;
 
     // Update Canonical Link
-    let canonical = document.querySelector('link[rel="canonical"]');
+    let canonical = document.querySelector(
+      'link[rel="canonical"]',
+    ) as HTMLLinkElement | null;
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.rel = "canonical";
@@ -128,7 +142,7 @@ function App() {
   }, [currentPath]);
 
   // Programmatic client-side navigation handler
-  const navigate = (path) => {
+  const navigate = (path: string) => {
     window.history.pushState({}, "", path);
     setCurrentPath(path);
 
@@ -197,7 +211,9 @@ function App() {
           MAIN CONTENT (ROUTER)
       ==================== */}
       <div key={activeRouteKey} className="animate-page-enter">
-        {renderMainContent()}
+        <Suspense fallback={<div className="min-h-[50vh] bg-white" />}>
+          {renderMainContent()}
+        </Suspense>
       </div>
 
       {/* ==================== 

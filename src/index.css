@@ -1,22 +1,28 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  --font-sans:
+    "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
 
-  /* KREADIKA Brand Blue Palette (derived from logo) */
-  --color-kreadika-navy: #0e223d;
-  --color-kreadika-navy-light: #16335b;
-  --color-kreadika-royal: #1d63dc;
-  --color-kreadika-royal-dark: #154eb5;
-  --color-kreadika-sky: #3fa4dc;
-  --color-kreadika-ice: #f0f7ff;
-  --color-kreadika-ice-border: #d4e7fb;
+  --color-kreadika-950: #082f49;
+  --color-kreadika-900: #0a3d5c;
+  --color-kreadika-800: #064e77;
+  --color-kreadika-700: #035c91;
+  --color-kreadika-600: #026aa7;
+  --color-kreadika-500: #0284c7;
+  --color-kreadika-400: #38bdf8;
+  --color-kreadika-300: #7dd3fc;
+  --color-kreadika-200: #bae6fd;
+  --color-kreadika-100: #e0f2fe;
+  --color-kreadika-50: #f0f9ff;
+  --color-kreadika-body: #064e77;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
-    color: #0e223d;
+    color: var(--color-kreadika-body);
     background-color: #ffffff;
     scroll-behavior: smooth;
   }
