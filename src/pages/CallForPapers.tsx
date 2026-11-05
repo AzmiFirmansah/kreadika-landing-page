@@ -842,6 +842,19 @@ function CallForPapers({ onNavigate }: PageProps) {
                   <span>Daftar Pustaka</span>
                 </li>
               </ol>
+<<<<<<< HEAD:src/pages/CallForPapers.tsx
+=======
+
+              <div className="mt-auto pt-6">
+                <div className="rounded-xl border border-kreadika-200/70 bg-kreadika-50/60 p-4 text-xs text-kreadika-800">
+                  <p className="leading-relaxed">
+                    Format naskah praktik baik memfasilitasi pendidik dan
+                    praktisi untuk mendokumentasikan terobosan nyata
+                    pembelajaran secara ilmiah dan aplikatif.
+                  </p>
+                </div>
+              </div>
+>>>>>>> ecbb783abac959e176326c3f5a6995ee7b0e8127:src/pages/CallForPapers.jsx
             </div>
           </div>
         </div>

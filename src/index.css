@@ -1,9 +1,13 @@
 @import "tailwindcss";
 
 @theme {
+<<<<<<< HEAD
   --font-sans:
     "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     sans-serif;
+=======
+  --font-sans: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+>>>>>>> ecbb783abac959e176326c3f5a6995ee7b0e8127
 
   --color-kreadika-950: #082f49;
   --color-kreadika-900: #0a3d5c;
