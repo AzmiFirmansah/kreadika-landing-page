@@ -21,7 +21,9 @@ function Panitia(_props: PageProps = {}) {
             <span className="inline-flex items-center gap-2 rounded-full border border-kreadika-200 bg-white px-4 py-1.5 text-xs font-semibold tracking-wide text-kreadika-700 shadow-2xs">
               <span className="h-2 w-2 rounded-full bg-kreadika-600 animate-pulse"></span>
               <span>KREADIKA 2027</span>
-              <span aria-hidden="true" className="text-slate-600">•</span>
+              <span aria-hidden="true" className="text-slate-600">
+                •
+              </span>
               <span className="text-kreadika-600">Komite &amp; Pembicara</span>
             </span>
 
