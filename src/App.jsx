@@ -2,8 +2,8 @@ import { useState, useEffect, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import { ROUTES_SEO, SITE_INFO } from "./data/kreadikaData";
 
-// Lazy load non-homepage routes for optimal initial mobile payload & LCP
 const Tentang = lazy(() => import("./pages/Tentang"));
 const Panitia = lazy(() => import("./pages/Panitia"));
 const Mitra = lazy(() => import("./pages/Mitra"));
@@ -13,12 +13,22 @@ const PendaftaranOnline = lazy(() => import("./pages/PendaftaranOnline"));
 const Prosiding = lazy(() => import("./pages/Prosiding"));
 const Kontak = lazy(() => import("./pages/Kontak"));
 
+function resolveRouteSeo(currentPath) {
+  const cleanPath = currentPath.split("#")[0] || "/";
+  if (cleanPath.startsWith("/pendaftaran-online")) {
+    return ROUTES_SEO["/pendaftaran-online"];
+  }
+  const matchedKey = Object.keys(ROUTES_SEO).find(
+    (key) => key !== "/" && cleanPath.startsWith(key)
+  );
+  return ROUTES_SEO[matchedKey || "/"];
+}
+
 function App() {
   const [currentPath, setCurrentPath] = useState(
     window.location.pathname + window.location.hash
   );
 
-  // Sync state on browser back / forward navigation
   useEffect(() => {
     const handlePopState = () => {
       setCurrentPath(window.location.pathname + window.location.hash);
@@ -27,96 +37,84 @@ function App() {
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
 
-  // Update document title and SEO meta tags dynamically based on active route
+  // Sync document title, meta tags, canonical URL, and BreadcrumbList JSON-LD per route
   useEffect(() => {
-    let title = "Beranda | KREADIKA - Seminar Nasional Pendidikan Kreatif dan Adaptif";
-    let description =
-      "KREADIKA 2027 – Seminar Nasional Pendidikan Kreatif dan Adaptif di Era Digital. Menghubungkan pendidik, peneliti, dan praktisi untuk inovasi pendidikan Indonesia.";
-    let path = "/";
+    const seo = resolveRouteSeo(currentPath);
+    const canonicalUrl = `${SITE_INFO.siteUrl}${
+      seo.path === "/" ? "/" : seo.path
+    }`;
 
-    if (currentPath.startsWith("/tentang")) {
-      title = "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif";
-      description =
-        "Profil, visi, tema, dan latar belakang Seminar Nasional Pendidikan Kreatif dan Adaptif (KREADIKA) 2027.";
-      path = "/tentang";
-    } else if (currentPath.startsWith("/panitia")) {
-      title = "Panitia & Pembicara | KREADIKA 2027";
-      description =
-        "Susunan panitia pengarah, panitia pelaksana, dan jajaran pembicara utama (keynote speaker) KREADIKA 2027.";
-      path = "/panitia";
-    } else if (currentPath.startsWith("/mitra")) {
-      title = "Mitra & Kerja Sama | KREADIKA 2027";
-      description =
-        "Peluang kemitraan dan daftar institusi rekanan, co-host perguruan tinggi, serta organisasi profesi KREADIKA 2027.";
-      path = "/mitra";
-    } else if (currentPath.startsWith("/call-for-papers")) {
-      title = "Call for Papers | KREADIKA 2027 - Seminar Nasional Pendidikan";
-      description =
-        "Pengiriman makalah (call for papers) KREADIKA 2027. Subtema, tanggal penting, panduan penulisan, dan publikasi prosiding ber-ISBN.";
-      path = "/call-for-papers";
-    } else if (currentPath.startsWith("/pendaftaran-online")) {
-      title = "Pendaftaran Online | KREADIKA 2027";
-      description =
-        "Formulir pendaftaran online peserta dan pemakalah Seminar Nasional Pendidikan Kreatif dan Adaptif KREADIKA 2027.";
-      path = "/pendaftaran-online";
-    } else if (currentPath.startsWith("/pendaftaran")) {
-      title = "Pendaftaran & Biaya Kepesertaan | KREADIKA 2027";
-      description =
-        "Informasi alur pendaftaran, biaya kepesertaan pemakalah dan non-pemakalah Seminar Nasional KREADIKA 2027.";
-      path = "/pendaftaran";
-    } else if (currentPath.startsWith("/prosiding")) {
-      title = "Prosiding & Publikasi Ilmiah | KREADIKA 2027";
-      description =
-        "Informasi prosiding ber-ISBN, akses terbuka (open access), dan publikasi artikel ilmiah KREADIKA 2027.";
-      path = "/prosiding";
-    } else if (currentPath.startsWith("/kontak")) {
-      title = "Kontak & Sekretariat | KREADIKA 2027";
-      description =
-        "Hubungi sekretariat KREADIKA 2027 melalui surel dan WhatsApp resmi untuk informasi pendaftaran, makalah, dan kerja sama.";
-      path = "/kontak";
-    }
+    document.title = seo.title;
 
-    document.title = title;
+    const setMeta = (selector, attr, value, createAttrs) => {
+      let el = document.querySelector(selector);
+      if (!el) {
+        el = document.createElement("meta");
+        Object.entries(createAttrs).forEach(([k, v]) => el.setAttribute(k, v));
+        document.head.appendChild(el);
+      }
+      el.setAttribute(attr, value);
+    };
 
-    // Update Meta Description
-    let metaDesc = document.querySelector('meta[name="description"]');
-    if (!metaDesc) {
-      metaDesc = document.createElement("meta");
-      metaDesc.name = "description";
-      document.head.appendChild(metaDesc);
-    }
-    metaDesc.content = description;
+    setMeta('meta[name="description"]', "content", seo.description, {
+      name: "description",
+    });
+    setMeta('meta[property="og:title"]', "content", seo.title, {
+      property: "og:title",
+    });
+    setMeta('meta[property="og:description"]', "content", seo.description, {
+      property: "og:description",
+    });
+    setMeta('meta[property="og:url"]', "content", canonicalUrl, {
+      property: "og:url",
+    });
+    setMeta('meta[name="twitter:title"]', "content", seo.title, {
+      name: "twitter:title",
+    });
+    setMeta('meta[name="twitter:description"]', "content", seo.description, {
+      name: "twitter:description",
+    });
 
-    // Update Open Graph tags
-    const ogTitle = document.querySelector('meta[property="og:title"]');
-    if (ogTitle) ogTitle.content = title;
-    const ogDesc = document.querySelector('meta[property="og:description"]');
-    if (ogDesc) ogDesc.content = description;
-    const ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = `https://kreadika.id${path === "/" ? "" : path}`;
-
-    // Update Canonical Link
     let canonical = document.querySelector('link[rel="canonical"]');
     if (!canonical) {
       canonical = document.createElement("link");
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = `https://kreadika.id${path === "/" ? "" : path}`;
-  }, [currentPath]);
+    canonical.href = canonicalUrl;
 
-  // Handle hash scrolling and anchor jumps on path change
-  useEffect(() => {
-    if (currentPath.endsWith("#kontak")) {
-      setTimeout(() => {
-        const el = document.getElementById("kontak");
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 100);
-      return;
+    const breadcrumbItems = [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Beranda",
+        item: `${SITE_INFO.siteUrl}/`,
+      },
+    ];
+    if (seo.path !== "/") {
+      breadcrumbItems.push({
+        "@type": "ListItem",
+        position: 2,
+        name: seo.breadcrumb,
+        item: canonicalUrl,
+      });
     }
 
+    let ldScript = document.getElementById("route-breadcrumb-jsonld");
+    if (!ldScript) {
+      ldScript = document.createElement("script");
+      ldScript.id = "route-breadcrumb-jsonld";
+      ldScript.type = "application/ld+json";
+      document.head.appendChild(ldScript);
+    }
+    ldScript.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems,
+    });
+  }, [currentPath]);
+
+  useEffect(() => {
     const hashIndex = currentPath.indexOf("#");
     if (hashIndex !== -1) {
       const hashId = currentPath.substring(hashIndex + 1);
@@ -129,29 +127,19 @@ function App() {
     }
   }, [currentPath]);
 
-  // Programmatic client-side navigation handler
   const navigate = (path) => {
     window.history.pushState({}, "", path);
     setCurrentPath(path);
 
-    const isHashKontak = path.endsWith("#kontak");
     const hashIndex = path.indexOf("#");
-
-    if (isHashKontak) {
-      setTimeout(() => {
-        const el = document.getElementById("kontak");
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 50);
-    } else if (hashIndex !== -1) {
+    if (hashIndex !== -1) {
       const hashId = path.substring(hashIndex + 1);
       setTimeout(() => {
         const el = document.getElementById(hashId);
         if (el) {
           el.scrollIntoView({ behavior: "smooth" });
         }
-      }, 50);
+      }, 60);
     } else {
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
@@ -159,7 +147,6 @@ function App() {
 
   const activeRouteKey = currentPath.split("#")[0] || "/";
 
-  // Route selector
   const renderMainContent = () => {
     if (currentPath.startsWith("/tentang")) {
       return <Tentang onNavigate={navigate} />;
@@ -189,24 +176,32 @@ function App() {
   };
 
   return (
-    <div className="bg-white text-kreadika-navy antialiased font-sans selection:bg-blue-100 selection:text-kreadika-navy">
-      {/* ==================== 
-          MAIN NAVBAR
-      ==================== */}
+    <div className="bg-white text-kreadika-950 antialiased font-editorial selection:bg-kreadika-100 selection:text-kreadika-950">
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-md focus:bg-kreadika-950 focus:px-4 focus:py-2.5 focus:text-sm focus:font-bold focus:text-white"
+      >
+        Lewati ke konten utama
+      </a>
+
       <Navbar currentPath={currentPath} onNavigate={navigate} />
 
-      {/* ==================== 
-          MAIN CONTENT (ROUTER)
-      ==================== */}
-      <div key={activeRouteKey} className="animate-page-enter">
-        <Suspense fallback={<div className="min-h-[50vh] bg-white" />}>
+      <div id="main-content" key={activeRouteKey} className="animate-page-enter">
+        <Suspense
+          fallback={
+            <div
+              role="status"
+              aria-live="polite"
+              className="flex min-h-[50vh] items-center justify-center bg-white text-sm font-semibold text-slate-700"
+            >
+              Memuat halaman...
+            </div>
+          }
+        >
           {renderMainContent()}
         </Suspense>
       </div>
 
-      {/* ==================== 
-          FOOTER
-      ==================== */}
       <Footer onNavigate={navigate} />
     </div>
   );

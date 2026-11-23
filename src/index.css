@@ -1,29 +1,73 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans:
+    "Plus Jakarta Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-display: "Bricolage Grotesque", system-ui, -apple-system, sans-serif;
+  --font-editorial: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
 
   --color-kreadika-950: #082f49;
-  --color-kreadika-900: #0a3d5c;
-  --color-kreadika-800: #064e77;
   --color-kreadika-700: #035c91;
-  --color-kreadika-600: #026aa7;
-  --color-kreadika-500: #0284c7;
-  --color-kreadika-400: #38bdf8;
-  --color-kreadika-300: #7dd3fc;
-  --color-kreadika-200: #bae6fd;
   --color-kreadika-100: #e0f2fe;
-  --color-kreadika-50: #f0f9ff;
-  --color-kreadika-body: #064e77;
+  --color-kreadika-mist: #d4e8f5;
+
+  --color-paper: #f6f4ef;
+  --color-paper-line: #d6d0c4;
+  --color-terracotta: #9a3412;
+  --color-amber-accent: #fbbf24;
+  --color-amber-hover: #fcd34d;
 }
 
 @layer base {
   html {
     font-family: var(--font-sans);
-    color: var(--color-kreadika-body);
+    color: var(--color-kreadika-950);
     background-color: #ffffff;
     scroll-behavior: smooth;
   }
+
+  a[href],
+  button:not(:disabled),
+  summary,
+  select,
+  label[for],
+  [role="button"]:not([aria-disabled="true"]),
+  [role="tab"]:not([aria-disabled="true"]) {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  [aria-disabled="true"] {
+    cursor: not-allowed;
+  }
+
+  a[href]:focus-visible,
+  button:focus-visible,
+  [role="tab"]:focus-visible {
+    outline: 2px solid var(--color-kreadika-700);
+    outline-offset: 2px;
+  }
+}
+
+.home-surface-dark a[href]:focus-visible,
+.home-surface-dark button:focus-visible,
+.home-surface-dark [role="tab"]:focus-visible {
+  outline: 2px solid var(--color-amber-accent);
+  outline-offset: 3px;
+}
+
+.home-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.55s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.home-reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 @keyframes pageFadeIn {
@@ -47,5 +91,10 @@
   }
   .animate-page-enter {
     animation: none;
+  }
+  .home-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
   }
 }
