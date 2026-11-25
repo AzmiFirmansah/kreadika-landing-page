@@ -8,7 +8,7 @@ export const SITE_INFO = {
   whatsapp: "[nomor WhatsApp]",
   addressLine1: "Citraland Beaumont B7/21, Sepang, Kota Serang",
   addressLine2: "Banten, Indonesia",
-  siteUrl: "https://kreadika.id",
+  siteUrl: "https://kreadika.vercel.app",
 };
 
 export const RUANG_LINGKUP = [

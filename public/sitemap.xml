@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://kreadika.id/</loc>
+    <loc>https://kreadika.vercel.app/</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/call-for-papers</loc>
+    <loc>https://kreadika.vercel.app/call-for-papers</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/pendaftaran</loc>
+    <loc>https://kreadika.vercel.app/pendaftaran</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/pendaftaran-online</loc>
+    <loc>https://kreadika.vercel.app/pendaftaran-online</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/tentang</loc>
+    <loc>https://kreadika.vercel.app/tentang</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/prosiding</loc>
+    <loc>https://kreadika.vercel.app/prosiding</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/panitia</loc>
+    <loc>https://kreadika.vercel.app/panitia</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/mitra</loc>
+    <loc>https://kreadika.vercel.app/mitra</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://kreadika.id/kontak</loc>
+    <loc>https://kreadika.vercel.app/kontak</loc>
     <lastmod>2026-11-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

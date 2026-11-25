@@ -7,11 +7,11 @@ export function handleNavClick(e, path, onNavigate) {
     return;
   }
 
-  if (path.includes("kreadika.id")) {
-    const localPath = path.replace(/https?:\/\/(www\.)?kreadika\.id/, "");
-    if (localPath.startsWith("/")) {
+  if (path.includes("kreadika.vercel.app")) {
+    const localPath = path.replace(/https?:\/\/kreadika\.vercel\.app/, "");
+    if (localPath.startsWith("/") || localPath === "") {
       e.preventDefault();
-      onNavigate(localPath);
+      onNavigate(localPath || "/");
     }
   }
 }

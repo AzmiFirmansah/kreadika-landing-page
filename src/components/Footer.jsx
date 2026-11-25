@@ -99,7 +99,7 @@ function Footer({ onNavigate }) {
         </div>
 
         <div className="mt-12 flex flex-col gap-2 border-t border-white/15 pt-6 text-xs text-kreadika-mist sm:flex-row sm:items-center sm:justify-between">
-          <p>© 2026 Scientific Advantage Publishing · kreadika.id</p>
+          <p>© 2026 Scientific Advantage Publishing · kreadika.vercel.app</p>
           <p>Co-host: [perguruan tinggi / organisasi profesi]</p>
         </div>
       </div>
