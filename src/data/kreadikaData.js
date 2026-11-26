@@ -1,7 +1,7 @@
 export const SITE_INFO = {
   name: "KREADIKA",
   year: "2027",
-  fullName: "KREADIKA 2027: Seminar Nasional Pendidikan Kreatif dan Adaptif",
+  fullName: "KREADIKA: Seminar Nasional Pendidikan Kreatif dan Adaptif",
   tagline: "Mendidik Manusia di Tengah Perubahan",
   organizer: "Scientific Advantage Publishing",
   email: "sekretariat@kreadika.id",
@@ -118,65 +118,65 @@ export const PETA_JALAN = [
 
 export const ROUTES_SEO = {
   "/": {
-    title: "Beranda | KREADIKA 2027: Seminar Nasional Pendidikan Kreatif dan Adaptif",
+    title: "Beranda | KREADIKA: Seminar Nasional Pendidikan Kreatif dan Adaptif",
     description:
-      "KREADIKA 2027 adalah Seminar Nasional Pendidikan Kreatif dan Adaptif di Era Digital. Forum nasional bagi pendidik, peneliti, dan praktisi pendidikan Indonesia.",
+      "KREADIKA adalah Seminar Nasional Pendidikan Kreatif dan Adaptif di Era Digital. Forum nasional bagi pendidik, peneliti, dan praktisi pendidikan Indonesia.",
     path: "/",
     breadcrumb: "Beranda",
   },
   "/tentang": {
     title: "Tentang KREADIKA | Seminar Nasional Pendidikan Kreatif dan Adaptif",
     description:
-      "Profil, visi, makna nama, target peserta, dan peta jalan 5 tahun Seminar Nasional Pendidikan Kreatif dan Adaptif (KREADIKA) 2027.",
+      "Profil, visi, makna nama, target peserta, dan peta jalan 5 tahun Seminar Nasional Pendidikan Kreatif dan Adaptif (KREADIKA).",
     path: "/tentang",
     breadcrumb: "Tentang KREADIKA",
   },
   "/panitia": {
-    title: "Panitia & Pembicara | KREADIKA 2027",
+    title: "Panitia & Pembicara | KREADIKA",
     description:
-      "Susunan panitia pelaksana, Komite Ilmiah penelaah naskah, dan jajaran pembicara kunci KREADIKA 2027.",
+      "Susunan panitia pelaksana, Komite Ilmiah penelaah naskah, dan jajaran pembicara kunci KREADIKA.",
     path: "/panitia",
     breadcrumb: "Panitia",
   },
   "/mitra": {
-    title: "Mitra & Kerja Sama | KREADIKA 2027",
+    title: "Mitra & Kerja Sama | KREADIKA",
     description:
-      "Daftar co-host perguruan tinggi, organisasi profesi, jurnal mitra, dan skema kerja sama KREADIKA 2027.",
+      "Daftar co-host perguruan tinggi, organisasi profesi, jurnal mitra, dan skema kerja sama KREADIKA.",
     path: "/mitra",
     breadcrumb: "Mitra & Kerja Sama",
   },
   "/call-for-papers": {
-    title: "Call for Papers | KREADIKA 2027: Seminar Nasional Pendidikan",
+    title: "Call for Papers | KREADIKA: Seminar Nasional Pendidikan",
     description:
-      "Pengiriman makalah KREADIKA 2027. Tujuh ruang lingkup topik, tanggal penting, ketentuan penulisan, dan publikasi prosiding ber-ISSN dan ber-DOI.",
+      "Pengiriman makalah KREADIKA. Tujuh ruang lingkup topik, tanggal penting, ketentuan penulisan, dan publikasi prosiding ber-ISSN dan ber-DOI.",
     path: "/call-for-papers",
     breadcrumb: "Call for Papers",
   },
   "/pendaftaran": {
-    title: "Pendaftaran & Biaya Kepesertaan | KREADIKA 2027",
+    title: "Pendaftaran & Biaya Kepesertaan | KREADIKA",
     description:
-      "Informasi alur registrasi dan biaya kepesertaan pemakalah serta peserta non-pemakalah Seminar Nasional KREADIKA 2027.",
+      "Informasi alur registrasi dan biaya kepesertaan pemakalah serta peserta non-pemakalah Seminar Nasional KREADIKA.",
     path: "/pendaftaran",
     breadcrumb: "Pendaftaran",
   },
   "/pendaftaran-online": {
-    title: "Pendaftaran Online | KREADIKA 2027",
+    title: "Pendaftaran Online | KREADIKA",
     description:
-      "Status pembukaan formulir pendaftaran online dan berkas yang perlu disiapkan untuk Seminar Nasional KREADIKA 2027.",
+      "Status pembukaan formulir pendaftaran online dan berkas yang perlu disiapkan untuk Seminar Nasional KREADIKA.",
     path: "/pendaftaran-online",
     breadcrumb: "Pendaftaran Online",
   },
   "/prosiding": {
-    title: "Prosiding & Publikasi Ilmiah | KREADIKA 2027",
+    title: "Prosiding & Publikasi Ilmiah | KREADIKA",
     description:
-      "Informasi prosiding ber-ISSN dan ber-DOI akses terbuka (open access) serta rekomendasi jurnal mitra KREADIKA 2027.",
+      "Informasi prosiding ber-ISSN dan ber-DOI akses terbuka (open access) serta rekomendasi jurnal mitra KREADIKA.",
     path: "/prosiding",
     breadcrumb: "Prosiding",
   },
   "/kontak": {
-    title: "Kontak & Sekretariat | KREADIKA 2027",
+    title: "Kontak & Sekretariat | KREADIKA",
     description:
-      "Alamat sekretariat, surel resmi, WhatsApp, dokumen unduhan, dan kanal media sosial resmi KREADIKA 2027.",
+      "Alamat sekretariat, surel resmi, WhatsApp, dokumen unduhan, dan kanal media sosial resmi KREADIKA.",
     path: "/kontak",
     breadcrumb: "Kontak",
   },

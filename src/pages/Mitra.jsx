@@ -44,7 +44,7 @@ function Mitra({ onNavigate }) {
     >
       <PageHero
         sectionLabel="Mitra & Kerja Sama"
-        title="Mitra KREADIKA 2027"
+        title="Mitra KREADIKA"
         description="Perguruan tinggi, organisasi profesi, dan jurnal yang bekerja sama dalam penyelenggaraan KREADIKA."
         onNavigate={onNavigate}
       />
@@ -178,7 +178,7 @@ function Mitra({ onNavigate }) {
 
       <ClosingBand
         eyebrow="Ajukan Kemitraan"
-        title="Tertarik bermitra dengan KREADIKA 2027?"
+        title="Tertarik bermitra dengan KREADIKA?"
         description="Kirim surel kepada sekretariat dengan mencantumkan nama lembaga dan bentuk kerja sama yang diminati."
         primaryAction={{
           label: `Kirim surel ke ${SITE_INFO.email}`,

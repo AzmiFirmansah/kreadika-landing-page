@@ -59,8 +59,8 @@ function Panitia({ onNavigate }) {
     >
       <PageHero
         sectionLabel="Panitia & Pembicara"
-        title="Panitia KREADIKA 2027"
-        description="Panitia penyelenggara, Komite Ilmiah, dan pembicara kunci yang mengawal tata kelola dan kualitas akademik KREADIKA 2027."
+        title="Panitia KREADIKA"
+        description="Panitia penyelenggara, Komite Ilmiah, dan pembicara kunci yang mengawal tata kelola dan kualitas akademik KREADIKA."
         onNavigate={onNavigate}
         aside={
           <dl className="divide-y divide-white/15">
@@ -107,7 +107,7 @@ function Panitia({ onNavigate }) {
               <p>
                 Penyelenggaraan{" "}
                 <strong className="font-semibold text-kreadika-950">
-                  KREADIKA 2027
+                  KREADIKA
                 </strong>{" "}
                 didukung oleh susunan kepanitiaan, komite penelaah ilmiah
                 independen, serta narasumber kunci di bidang kebijakan, sains
@@ -244,14 +244,14 @@ function Panitia({ onNavigate }) {
               Susunan Panitia
             </h2>
             <p className="mt-2 text-sm text-slate-700 sm:text-base">
-              Panitia pelaksana seminar nasional KREADIKA 2027.
+              Panitia pelaksana seminar nasional KREADIKA.
             </p>
           </div>
 
           <div className="mt-8 overflow-x-auto border border-paper-line bg-white">
             <table className="w-full border-collapse text-left text-sm">
               <caption className="sr-only">
-                Daftar jabatan dan nama panitia pelaksana KREADIKA 2027
+                Daftar jabatan dan nama panitia pelaksana KREADIKA
               </caption>
               <thead>
                 <tr className="border-b-2 border-kreadika-950 bg-kreadika-950 text-white">

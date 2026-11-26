@@ -242,7 +242,7 @@ function Home({ onNavigate }) {
       {/* Shared DRY Timeline Band */}
       <TimelineBand
         id="tanggal-penting"
-        heading="Tanggal Penting KREADIKA 2027"
+        heading="Tanggal Penting KREADIKA"
         showCta
         onNavigate={onNavigate}
       />
@@ -275,7 +275,7 @@ function Home({ onNavigate }) {
                   Prosiding ber-ISSN dan ber-DOI
                 </h3>
                 <p className="mt-4 text-base leading-relaxed text-slate-700">
-                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA 2027
+                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA
                   oleh {SITE_INFO.organizer} dengan nomor ISSN dan DOI sehingga
                   mudah dirujuk secara akademik.
                 </p>
@@ -369,7 +369,7 @@ function Home({ onNavigate }) {
       {/* Shared DRY Closing Band */}
       <ClosingBand
         id="kirim-abstrak"
-        eyebrow="Call for Papers KREADIKA 2027"
+        eyebrow="Call for Papers KREADIKA"
         title="Bagikan praktik baik dan hasil penelitian Anda"
         description="Kami mengundang artikel hasil penelitian, kajian konseptual, dan praktik baik dari sekolah maupun satuan pendidikan di seluruh Indonesia."
         primaryAction={{

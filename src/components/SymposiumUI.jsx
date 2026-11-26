@@ -150,7 +150,7 @@ export function ClosingBand({
 
 export function TimelineBand({
   id = "tanggal-penting",
-  heading = "Tanggal Penting KREADIKA 2027",
+  heading = "Tanggal Penting KREADIKA",
   showCta = true,
   onNavigate,
 }) {

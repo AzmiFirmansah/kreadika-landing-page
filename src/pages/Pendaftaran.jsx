@@ -69,7 +69,7 @@ function Pendaftaran({ onNavigate }) {
             <div className="overflow-x-auto border border-slate-200 lg:col-span-8">
               <table className="w-full border-collapse text-left text-sm">
                 <caption className="sr-only">
-                  Tabel biaya pendaftaran KREADIKA 2027 berdasarkan kategori
+                  Tabel biaya pendaftaran KREADIKA berdasarkan kategori
                   pemakalah dan peserta
                 </caption>
                 <thead>
@@ -158,7 +158,7 @@ function Pendaftaran({ onNavigate }) {
       </section>
 
       <ClosingBand
-        eyebrow="Registrasi KREADIKA 2027"
+        eyebrow="Registrasi KREADIKA"
         title="Siapkan bukti pembayaran sebelum mengisi formulir"
         description="Cek status pembukaan formulir online atau hubungi sekretariat jika ada pertanyaan terkait kepesertaan."
         primaryAction={{

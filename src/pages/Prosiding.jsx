@@ -127,8 +127,8 @@ function Prosiding({ onNavigate }) {
 
       <ClosingBand
         eyebrow="Arsip Publikasi"
-        title="Arsip Prosiding KREADIKA 2027"
-        description="Prosiding KREADIKA 2027 terbit pada [tanggal]. Sementara itu, Anda dapat mempelajari ketentuan penulisan makalah."
+        title="Arsip Prosiding KREADIKA"
+        description="Prosiding KREADIKA terbit pada [tanggal]. Sementara itu, Anda dapat mempelajari ketentuan penulisan makalah."
         primaryAction={{
           label: "Arsip Segera Tersedia",
           disabled: true,

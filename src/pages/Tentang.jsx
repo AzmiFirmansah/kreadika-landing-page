@@ -344,7 +344,7 @@ function Tentang({ onNavigate }) {
       </section>
 
       <ClosingBand
-        eyebrow="Kemitraan KREADIKA 2027"
+        eyebrow="Kemitraan KREADIKA"
         title="Ingin menjadi co-host atau mitra?"
         description="Perguruan tinggi, organisasi profesi, dan jurnal ilmiah dapat bergabung sebagai mitra penyelenggaraan KREADIKA."
         primaryAction={{ label: "Lihat bentuk kerja sama", href: "/mitra" }}

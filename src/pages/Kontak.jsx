@@ -103,7 +103,7 @@ function Kontak({ onNavigate }) {
               Dokumen dan Berkas Resmi
             </h2>
             <p className="mt-2 text-sm text-slate-700 sm:text-base">
-              Template makalah dan poster call for papers KREADIKA 2027.
+              Template makalah dan poster call for papers KREADIKA.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ function Kontak({ onNavigate }) {
                   </span>
                 </div>
                 <h3 className="mt-3 font-display text-xl font-bold text-kreadika-950">
-                  Template makalah KREADIKA 2027
+                  Template makalah KREADIKA
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-700">
                   Berkas template sedang difinalisasi. Sambil menunggu, Anda

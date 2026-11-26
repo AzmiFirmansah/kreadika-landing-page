@@ -14,7 +14,7 @@ function PendaftaranOnline({ onNavigate }) {
     >
       <PageHero
         sectionLabel="Pendaftaran Online"
-        title="Pendaftaran Online KREADIKA 2027"
+        title="Pendaftaran Online KREADIKA"
         description={`Pendaftaran dan pembayaran dilakukan melalui sistem registrasi ${SITE_INFO.organizer}.`}
         onNavigate={onNavigate}
         aside={

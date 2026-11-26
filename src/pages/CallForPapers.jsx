@@ -115,7 +115,7 @@ function CallForPapers({ onNavigate }) {
     >
       <PageHero
         sectionLabel="Call for Papers"
-        title="Call for Papers KREADIKA 2027"
+        title="Call for Papers KREADIKA"
         description="Tema: Pendidikan Kreatif dan Adaptif di Era Digital. Kami mengundang artikel hasil penelitian, kajian konseptual, dan praktik baik."
         onNavigate={onNavigate}
         aside={
@@ -163,7 +163,7 @@ function CallForPapers({ onNavigate }) {
                   lineHeight: 1.12,
                 }}
               >
-                Undangan Pengiriman Makalah KREADIKA 2027
+                Undangan Pengiriman Makalah KREADIKA
               </h2>
             </div>
 
@@ -171,7 +171,7 @@ function CallForPapers({ onNavigate }) {
               <p>
                 Panitia{" "}
                 <strong className="font-semibold text-kreadika-950">
-                  KREADIKA 2027
+                  KREADIKA
                 </strong>{" "}
                 mengundang guru, tenaga kependidikan, pengawas sekolah, kepala
                 sekolah, pemangku kebijakan pendidikan, dosen, peneliti, dan
@@ -292,10 +292,10 @@ function CallForPapers({ onNavigate }) {
                   Luaran utama pemakalah
                 </p>
                 <h3 className="mt-3 font-display text-2xl font-bold text-kreadika-950">
-                  Prosiding KREADIKA 2027
+                  Prosiding KREADIKA
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-slate-700 sm:text-base">
-                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA 2027
+                  Artikel terpilih diterbitkan dalam Prosiding KREADIKA
                   oleh {SITE_INFO.organizer} (ber-ISSN dan ber-DOI).
                 </p>
               </div>
@@ -487,7 +487,7 @@ function CallForPapers({ onNavigate }) {
         id="kirim"
         eyebrow="Pengiriman Naskah"
         title="Siap mengirim abstrak?"
-        description="Sistem pengiriman OJS dibuka bersamaan dengan pengumuman resmi call for papers KREADIKA 2027."
+        description="Sistem pengiriman OJS dibuka bersamaan dengan pengumuman resmi call for papers KREADIKA."
         primaryAction={{ label: "Sistem OJS Segera Dibuka", disabled: true }}
         secondaryAction={{
           label: "Lihat halaman unduhan & kontak",
